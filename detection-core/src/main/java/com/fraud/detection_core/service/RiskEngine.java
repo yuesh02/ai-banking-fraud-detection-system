@@ -10,8 +10,8 @@ import java.util.List;
 public class RiskEngine {
 
     public int calculateRisk(Transaction current,
-                             List<Transaction> history,
-                             StringBuilder reasons) {
+            List<Transaction> history,
+            StringBuilder reasons) {
 
         int risk = 10; // baseline risk
 
@@ -19,15 +19,11 @@ public class RiskEngine {
             return risk;
         }
 
-        // =========================
-        // 1️⃣ Device Check (NULL SAFE)
-        // =========================
+        // 1 Device Check (NULL SAFE)
         if (current.getDeviceId() != null) {
             boolean knownDevice = history.stream()
-                    .anyMatch(t ->
-                            t.getDeviceId() != null &&
-                            t.getDeviceId().equals(current.getDeviceId())
-                    );
+                    .anyMatch(t -> t.getDeviceId() != null &&
+                            t.getDeviceId().equals(current.getDeviceId()));
 
             if (!knownDevice) {
                 risk += 20;
@@ -35,15 +31,12 @@ public class RiskEngine {
             }
         }
 
-        // =========================
-        // 2️⃣ Country Check (NULL SAFE)
-        // =========================
+        // Country Check (NULL SAFE)
+
         if (current.getMerchantCountry() != null) {
             boolean knownCountry = history.stream()
-                    .anyMatch(t ->
-                            t.getMerchantCountry() != null &&
-                            t.getMerchantCountry().equals(current.getMerchantCountry())
-                    );
+                    .anyMatch(t -> t.getMerchantCountry() != null &&
+                            t.getMerchantCountry().equals(current.getMerchantCountry()));
 
             if (!knownCountry) {
                 risk += 20;
@@ -51,20 +44,16 @@ public class RiskEngine {
             }
         }
 
-        // =========================
-        // 3️⃣ Customer Country Mismatch
-        // =========================
+        // Customer Country Mismatch
         if (current.getCustomerCountry() != null &&
-            current.getMerchantCountry() != null &&
-            !current.getCustomerCountry().equals(current.getMerchantCountry())) {
+                current.getMerchantCountry() != null &&
+                !current.getCustomerCountry().equals(current.getMerchantCountry())) {
 
             risk += 15;
             reasons.append("Cross-border transaction; ");
         }
 
-        // =========================
-        // 4️⃣ Rolling Average
-        // =========================
+        // Rolling Average
         double avgAmount = history.stream()
                 .mapToDouble(Transaction::getAmount)
                 .average()
@@ -75,18 +64,14 @@ public class RiskEngine {
             reasons.append("Amount spike; ");
         }
 
-        // =========================
-        // 5️⃣ Velocity Fraud
-        // =========================
+        // Velocity Fraud
         if (current.getTimestamp() != null) {
 
             LocalDateTime now = current.getTimestamp();
 
             long recentCount = history.stream()
-                    .filter(t ->
-                            t.getTimestamp() != null &&
-                            t.getTimestamp().isAfter(now.minusSeconds(30))
-                    )
+                    .filter(t -> t.getTimestamp() != null &&
+                            t.getTimestamp().isAfter(now.minusSeconds(30)))
                     .count();
 
             if (recentCount >= 5) {
@@ -95,12 +80,10 @@ public class RiskEngine {
             }
         }
 
-        // =========================
-        // 6️⃣ High Risk Categories
-        // =========================
+        // High Risk Categories
         if (current.getMerchantCategory() != null) {
             if (current.getMerchantCategory().equalsIgnoreCase("CRYPTO") ||
-                current.getMerchantCategory().equalsIgnoreCase("GAMBLING")) {
+                    current.getMerchantCategory().equalsIgnoreCase("GAMBLING")) {
 
                 risk += 20;
                 reasons.append("High-risk merchant; ");

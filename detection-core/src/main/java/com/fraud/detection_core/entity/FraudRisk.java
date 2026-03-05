@@ -18,6 +18,7 @@ public class FraudRisk {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    
     private String transactionId;
     private String customerId;
 
