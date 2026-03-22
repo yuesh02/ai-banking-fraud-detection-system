@@ -5,6 +5,8 @@ import com.fraud.detection_core.entity.FraudRisk;
 import com.fraud.detection_core.service.DetectionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
 @RestController
 @RequestMapping("/detect")

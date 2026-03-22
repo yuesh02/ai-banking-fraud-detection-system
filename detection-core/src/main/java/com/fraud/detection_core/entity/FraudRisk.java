@@ -1,5 +1,4 @@
 package com.fraud.detection_core.entity;
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,6 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Data
 public class FraudRisk {
 
     @Id
@@ -22,11 +22,35 @@ public class FraudRisk {
     private String transactionId;
     private String customerId;
 
-    private int riskScore;
+    private double riskScore;
     private boolean fraud;
 
-    @Column(length = 500)
-    private String reasons;
+    @Column(nullable = false,length = 500)
+    private String reason;
 
-    private LocalDateTime evaluatedAt;
+    @Column(nullable = false)
+    private LocalDateTime timestamp;
+    @Enumerated(EnumType.STRING)
+    private RiskLevel riskLevel;   // LOW / MEDIUM / HIGH
+    @Enumerated(EnumType.STRING)
+    private RiskAction action;      // ALLOW / BLOCK / REVIEW / ALERT
+   
+    @Column(nullable = false)
+    private Boolean actualFraud; // optional for ML metrics
+@PrePersist
+public void prePersist() {
+
+    if (timestamp == null) {
+        timestamp = LocalDateTime.now();
+    }
+
+    if (reason == null || reason.isBlank()) {
+        reason = "Low risk behaviour detected";
+    }
+
+    if (actualFraud == null) {
+        actualFraud = false;
+    }
+}
+
 }

@@ -6,7 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class RiskDistributionDTO {
-    private String range;
-    private Long count;
-    
+    private String level;
+    private int count;
 }

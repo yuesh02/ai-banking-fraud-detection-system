@@ -1,9 +1,13 @@
 package com.fraud.detection_core.repository;
 
 import com.fraud.detection_core.entity.Transaction;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import java.util.List;
+import java.util.Optional;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
@@ -12,6 +16,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     @Query("SELECT SUM(t.amount) FROM Transaction t")
 Double totalTransactionAmount();
 
+Optional<Transaction> findByTransactionId(
+        String transactionId
+);
 @Query("""
        SELECT t.merchantCountry, COUNT(f)
        FROM FraudRisk f
@@ -44,4 +51,12 @@ ELSE '81-100'
 END
 """)
 List<Object[]> riskDistribution();
+
+List<Transaction> findByCustomerIdOrderByTimestampDesc(
+        String customerId
+);
+
+Page<Transaction> findAllByOrderByTimestampDesc(Pageable pageable);
+
+
 }
