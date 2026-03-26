@@ -1,50 +1,76 @@
+import { useEffect } from "react";
+
 function Modal({ isOpen, onClose, children }) {
+
+  // ESC key close
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
 
   if (!isOpen) return null;
 
   return (
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="
+        fixed inset-0 z-50
+        flex items-center justify-center
+        bg-white/40 backdrop-blur-md
+        transition-all duration-300
+      "
+    >
 
-    <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-
+      {/* Modal Box */}
       <div
         className="
-          bg-white
-          rounded-xl
-          shadow-lg
-          w-full
-          max-w-2xl
-          p-6
-          relative
-          max-h-[80vh]
-          overflow-y-auto
+          w-full max-w-2xl
+          bg-white rounded-2xl
+          shadow-2xl
+          overflow-hidden
+          animate-modalIn
+          max-h-[85vh]
+          flex flex-col
         "
       >
 
-        {/* Close Button */}
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b">
 
-        <button
-          onClick={onClose}
-          className="
-            absolute
-            top-3
-            right-3
-            text-gray-500
-            hover:text-black
-            text-lg
-            font-bold
-          "
-        >
-          ✕
-        </button>
+          <h2 className="text-sm font-semibold text-gray-700">
+            Details
+          </h2>
 
-        {children}
+          <button
+            onClick={onClose}
+            className="
+              w-8 h-8 flex items-center justify-center
+              rounded-full
+              bg-gray-100 hover:bg-gray-200
+              text-gray-600 hover:text-black
+              transition
+            "
+          >
+            ✕
+          </button>
+
+        </div>
+
+        {/* Content */}
+        <div className="p-6 overflow-y-auto">
+          {children}
+        </div>
 
       </div>
 
     </div>
-
   );
-
 }
 
 export default Modal;

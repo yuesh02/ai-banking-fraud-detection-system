@@ -106,6 +106,11 @@ public class DetectionService {
                         .riskScore(
                                 (double) finalScore
                         )
+                        .actualFraud(
+    Boolean.TRUE.equals(
+        transaction.getFraud()
+    )
+)
                         .riskLevel(level)
                         .action(action)
                         .fraud(fraud)

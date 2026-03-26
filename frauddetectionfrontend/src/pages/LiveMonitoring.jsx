@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/immutability */
 import { useEffect, useState } from "react";
 
 import {
@@ -142,121 +143,96 @@ function LiveMonitoring() {
 
       {/* LIVE TABLE */}
 
-      <div className="bg-white shadow rounded-xl p-5 max-h-[70vh] overflow-y-auto">
+      {/* LIVE CARDS */}
 
-        <table className="w-full text-left">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[70vh] overflow-y-auto pr-1">
 
-          <thead>
+  {transactions.map((txn) => {
 
-            <tr className="border-b">
+    const isHigh = txn.riskLevel === "HIGH";
 
-              <th>Transaction ID</th>
-              <th>Customer</th>
-              <th>Amount</th>
-              <th>Risk Level</th>
-              <th>Fraud</th>
-              <th>Timestamp</th>
-              <th>Details</th>
+    return (
 
-            </tr>
+      <div
+        key={txn.transactionId}
+        className={`
+          bg-white border rounded-2xl p-5
+          shadow-sm hover:shadow-md transition
+          flex flex-col justify-between
 
-          </thead>
+          ${isHigh ? "border-red-300 ring-1 ring-red-200" : "border-gray-200"}
+        `}
+      >
 
-          <tbody>
+        {/* TOP */}
+        <div className="flex justify-between items-start">
 
-            {transactions.map((txn) => {
+          <div>
+            <p className="text-sm font-semibold text-gray-800">
+              #{txn.transactionId}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {txn.customerId}
+            </p>
+          </div>
 
-              const isHigh =
-                txn.riskLevel === "HIGH";
+          <RiskBadge level={txn.riskLevel} />
 
-              return (
+        </div>
 
-                <tr
-                  key={txn.transactionId}
-                  className={`
-                    border-b
-                    hover:bg-gray-50
-                    transition
-
-                    ${
-                      isHigh
-                        ? "bg-red-50 animate-pulse"
-                        : ""
-                    }
-                  `}
-                >
-
-                  <td>
-                    {txn.transactionId}
-                  </td>
-
-                  <td>
-                    {txn.customerId}
-                  </td>
-
-                  <td>
-                    ₹ {txn.amount}
-                  </td>
-
-                  <td>
-
-                    <RiskBadge
-                      level={
-                        txn.riskLevel
-                      }
-                    />
-
-                  </td>
-
-                  <td>
-
-                    {txn.fraud
-                      ? "Yes"
-                      : "No"}
-
-                  </td>
-
-                  <td>
-
-                    {new Date(
-                      txn.timestamp
-                    ).toLocaleString()}
-
-                  </td>
-
-                  <td>
-
-                    <button
-                      onClick={() =>
-                        handleView(
-                          txn.transactionId
-                        )
-                      }
-                      className="
-                        bg-blue-600
-                        text-white
-                        px-3
-                        py-1
-                        rounded
-                        hover:bg-blue-700
-                      "
-                    >
-                      View
-                    </button>
-
-                  </td>
-
-                </tr>
-
-              );
-
+        {/* AMOUNT */}
+        <div className="mt-4">
+          <p className="text-xs text-gray-500">Amount</p>
+          <p className="text-xl font-bold text-indigo-600">
+            ₹ {txn.amount?.toLocaleString("en-IN", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
             })}
+          </p>
+        </div>
 
-          </tbody>
+        {/* FRAUD STATUS */}
+        <div className="mt-3">
+          <span
+            className={`
+              text-xs px-2 py-1 rounded-full font-medium
+              ${txn.fraud
+                ? "bg-red-100 text-red-600"
+                : "bg-green-100 text-green-600"}
+            `}
+          >
+            {txn.fraud ? "Fraud" : "Safe"}
+          </span>
+        </div>
 
-        </table>
+        {/* TIME */}
+        <p className="text-xs text-gray-400 mt-3">
+          {new Date(txn.timestamp).toLocaleString()}
+        </p>
+
+        {/* BUTTON */}
+        <div className="mt-4 text-right">
+
+          <button
+            onClick={() => handleView(txn.transactionId)}
+            className="
+              px-3 py-1.5 text-xs font-medium
+              bg-indigo-600 text-white rounded-lg
+              hover:bg-indigo-700 transition
+            "
+          >
+            View Details
+          </button>
+
+        </div>
 
       </div>
+
+    );
+
+  })}
+
+</div>
 
       {/* MODAL */}
 

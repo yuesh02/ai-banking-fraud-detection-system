@@ -1,216 +1,164 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
 
-import {
-  getMetrics
-} from "../../services/metricsService";
+import { useEffect, useState } from "react";
+import { getMetrics } from "../../services/metricsService";
 
 function MetricsPanel() {
 
-  const [metrics,
-    setMetrics] = useState(null);
+  const [metrics, setMetrics] = useState(null);
+  const [seconds, setSeconds] = useState(20);
 
-  const [seconds,
-    setSeconds] = useState(20);
-
-  /* Fetch metrics */
-
-  useEffect(() => {
-
-    fetchMetrics();
-
-    const interval =
-      setInterval(
-        fetchMetrics,
-        20000
-      );
-
-    return () =>
-      clearInterval(interval);
-
-  }, []);
-
-  /* Countdown */
-
-  useEffect(() => {
-
-    const timer =
-      setInterval(() => {
-
-        setSeconds(prev =>
-          prev === 0 ? 20 : prev - 1
-        );
-
-      }, 1000);
-
-    return () =>
-      clearInterval(timer);
-
-  }, []);
-
-  const fetchMetrics =
-    async () => {
-
+  const fetchMetrics = async () => {
     try {
-
-      const data =
-        await getMetrics();
-
+      const data = await getMetrics();
       setMetrics(data);
-
       setSeconds(20);
-
     } catch (error) {
-
-      console.error(
-        "Metrics fetch error:",
-        error
-      );
-
+      console.error("Metrics fetch error:", error);
     }
-
   };
 
-  if (!metrics)
-    return null;
+  useEffect(() => {
+    fetchMetrics();
+    const interval = setInterval(fetchMetrics, 20000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeconds(prev => (prev === 0 ? 20 : prev - 1));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  if (!metrics) return null;
 
   return (
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm mt-6">
 
-    <div className="bg-white shadow rounded-xl p-5 mt-6">
-
-      <div className="flex justify-between mb-4">
-
-        <h2 className="text-lg font-semibold">
+      {/* Header */}
+      <div className="flex justify-between items-center px-5 py-4 border-b border-gray-100">
+        <h2 className="text-base font-semibold text-gray-800">
           Model Metrics
         </h2>
 
-        <div className="text-sm text-gray-500">
+        <span className="text-xs text-gray-400">
+          {seconds}s refresh
+        </span>
+      </div>
 
-          Refreshing in
+      <div className="p-5">
 
-          <span className="font-bold ml-1">
-            {seconds}s
-          </span>
+        {/* Metrics Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+          <MetricCard
+            title="Accuracy"
+            value={`${metrics.accuracy.toFixed(2)}%`}
+          />
+
+          <MetricCard
+            title="Precision"
+            value={metrics.precision.toFixed(2)}
+          />
+
+          <MetricCard
+            title="Recall"
+            value={metrics.recall.toFixed(2)}
+          />
 
         </div>
 
-      </div>
+        {/* 🔥 FULL WIDTH CONFUSION MATRIX CARD */}
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
 
-      {/* METRICS GRID */}
+          <h3 className="text-sm font-semibold text-gray-700 mb-5">
+            Confusion Matrix
+          </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Matrix */}
+          <div className="grid grid-cols-3 text-center">
 
-        <MetricCard
-          title="Accuracy"
-          value={`${metrics.accuracy.toFixed(2)}%`}
-        />
+            {/* Top Header */}
+            <div></div>
+            <div className="text-xl text-gray-500 font-medium">
+              Predicted Fraud
+            </div>
+            <div className="text-xl text-gray-500 font-medium">
+              Predicted Safe
+            </div>
 
-        <MetricCard
-          title="Precision"
-          value={metrics.precision}
-        />
+            {/* Row 1 */}
+            <div className="text-xl text-gray-500 font-medium mt-4">
+              Actual Fraud
+            </div>
 
-        <MetricCard
-          title="Recall"
-          value={metrics.recall}
-        />
+            <MatrixCell value={metrics.truePositive} type="good" />
 
-      </div>
+            <MatrixCell value={metrics.falseNegative} type="warning" />
 
-      {/* CONFUSION MATRIX */}
+            {/* Row 2 */}
+            <div className="text-xl text-gray-500 font-medium mt-4">
+              Actual Safe
+            </div>
 
-      <div className="mt-8">
+            <MatrixCell value={metrics.falsePositive} type="bad" />
 
-        <h3 className="font-semibold mb-4">
-          Confusion Matrix
-        </h3>
+            <MatrixCell value={metrics.trueNegative} type="neutral" />
 
-        <div className="grid grid-cols-2 gap-4 max-w-sm">
-
-          <MatrixBox
-            label="True Positive"
-            value={metrics.truePositive}
-            color="bg-green-500"
-          />
-
-          <MatrixBox
-            label="False Positive"
-            value={metrics.falsePositive}
-            color="bg-red-500"
-          />
-
-          <MatrixBox
-            label="False Negative"
-            value={metrics.falseNegative}
-            color="bg-yellow-500"
-          />
-
-          <MatrixBox
-            label="True Negative"
-            value={metrics.trueNegative}
-            color="bg-blue-500"
-          />
+          </div>
 
         </div>
 
       </div>
 
     </div>
-
   );
-
 }
 
 /* -----------------------------
-   Small components
+   Metric Card
 ----------------------------- */
 
-function MetricCard({
-  title,
-  value
-}) {
-
+function MetricCard({ title, value }) {
   return (
+    <div className="bg-gray-50 border border-gray-100 rounded-xl p-4">
 
-    <div className="bg-gray-50 p-4 rounded-lg">
-
-      <div className="text-sm text-gray-500">
+      <p className="text-xl text-gray-500">
         {title}
-      </div>
+      </p>
 
-      <div className="text-xl font-bold">
+      <p className="text-2xl font-semibold mt-1 text-gray-900">
         {value}
-      </div>
+      </p>
 
     </div>
-
   );
-
 }
 
-function MatrixBox({
-  label,
-  value,
-  color
-}) {
+/* -----------------------------
+   Matrix Cell
+----------------------------- */
+
+function MatrixCell({ value, type }) {
+
+  const styles = {
+    good: "bg-green-600 text-white",
+    bad: "bg-red-600 text-white",
+    warning: "bg-amber-500 text-white",
+    neutral: "bg-blue-600 text-white"
+  };
 
   return (
+    <div className={`mt-3 mx-2 p-4 rounded-xl shadow-sm ${styles[type]}`}>
 
-    <div
-      className={`${color} text-white p-4 rounded-lg`}
-    >
-
-      <div className="text-sm">
-        {label}
-      </div>
-
-      <div className="text-xl font-bold">
+      <p className="text-xl font-semibold">
         {value}
-      </div>
+      </p>
 
     </div>
-
   );
-
 }
 
 export default MetricsPanel;

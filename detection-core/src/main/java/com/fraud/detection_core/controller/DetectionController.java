@@ -16,7 +16,9 @@ public class DetectionController {
     private final DetectionService detectionService;
 
     @PostMapping
-    public FraudRisk detect(@RequestBody Transaction transaction) {
-        return detectionService.evaluate(transaction);
-    }
+public FraudRisk detect(
+        @RequestBody Transaction transaction
+) {
+    return detectionService.evaluate(transaction);
+}
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/immutability */
 import { useEffect, useState } from "react";
 
 import { getAlerts } from
@@ -193,121 +194,96 @@ function Alerts() {
 
       <div className="bg-white shadow rounded-xl p-5">
 
-        <table className="w-full text-left">
+        {/* ALERT CARD BOXES */}
 
-          <thead>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-            <tr className="border-b">
+  {alerts.map((alert) => {
 
-              <th>Transaction ID</th>
-              <th>Customer</th>
-              <th>Risk Level</th>
-              <th>Action</th>
-              <th>Timestamp</th>
-              <th>Details</th>
+    const isNew = !previousIds.includes(alert.transactionId);
+    const isHigh = alert.riskLevel === "HIGH";
 
-            </tr>
+    return (
 
-          </thead>
+      <div
+        key={alert.transactionId}
+        className={`
+          relative
+          bg-white
+          border rounded-2xl p-5
+          shadow-sm hover:shadow-md transition
 
-          <tbody>
+          ${isNew ? "border-green-300 bg-green-50" : "border-gray-200"}
+          ${isHigh ? "ring-2 ring-red-300" : ""}
+        `}
+      >
 
-            {alerts.map((alert) => {
+        {/* TOP SECTION */}
+        <div className="flex justify-between items-start">
 
-              const isNew =
-                !previousIds.includes(
-                  alert.transactionId
-                );
+          <div>
+            <p className="text-sm font-semibold text-gray-800">
+              #{alert.transactionId}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {alert.customerId}
+            </p>
+          </div>
 
-              const isHigh =
-                alert.riskLevel === "HIGH";
+          <AlertBadge level={alert.riskLevel} />
 
-              return (
+        </div>
 
-                <tr
-                  key={
-                    alert.transactionId
-                  }
-                  className={`
-                    border-b
-                    hover:bg-gray-50
-                    transition
+        {/* ACTION */}
+        <p className="text-sm text-gray-600 mt-3">
+          {alert.action}
+        </p>
 
-                    ${
-                      isNew
-                        ? "bg-green-50"
-                        : ""
-                    }
+        {/* TIME */}
+        <p className="text-xs text-gray-400 mt-2">
+          {new Date(alert.timestamp).toLocaleString()}
+        </p>
 
-                    ${
-                      isHigh
-                        ? "animate-pulse bg-red-50"
-                        : ""
-                    }
-                  `}
-                >
+        {/* TAGS */}
+        <div className="flex gap-2 mt-3">
 
-                  <td>
-                    {alert.transactionId}
-                  </td>
+          {isNew && (
+            <span className="text-[10px] bg-green-200 text-green-700 px-2 py-0.5 rounded-full">
+              New
+            </span>
+          )}
 
-                  <td>
-                    {alert.customerId}
-                  </td>
+          {isHigh && (
+            <span className="text-[10px] bg-red-200 text-red-700 px-2 py-0.5 rounded-full">
+              High Risk
+            </span>
+          )}
 
-                  <td>
+        </div>
 
-                    <AlertBadge
-                      level={
-                        alert.riskLevel
-                      }
-                    />
+        {/* BUTTON */}
+        <div className="mt-4 text-right">
 
-                  </td>
+          <button
+            onClick={() => handleView(alert.transactionId)}
+            className="
+              px-3 py-1.5 text-xs font-medium
+              bg-indigo-600 text-white rounded-lg
+              hover:bg-indigo-700 transition
+            "
+          >
+            View Details
+          </button>
 
-                  <td>
-                    {alert.action}
-                  </td>
+        </div>
 
-                  <td>
+      </div>
 
-                    {new Date(
-                      alert.timestamp
-                    ).toLocaleString()}
+    );
 
-                  </td>
+  })}
 
-                  <td>
-
-                    <button
-                      onClick={() =>
-                        handleView(
-                          alert.transactionId
-                        )
-                      }
-                      className="
-                        bg-blue-600
-                        text-white
-                        px-3
-                        py-1
-                        rounded
-                        hover:bg-blue-700
-                      "
-                    >
-                      View
-                    </button>
-
-                  </td>
-
-                </tr>
-
-              );
-
-            })}
-
-          </tbody>
-
-        </table>
+</div>
 
       </div>
 

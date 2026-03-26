@@ -17,6 +17,8 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "fraud")
+    private Boolean fraud;
     private String transactionId;
     private String accountId;
     private String customerId;

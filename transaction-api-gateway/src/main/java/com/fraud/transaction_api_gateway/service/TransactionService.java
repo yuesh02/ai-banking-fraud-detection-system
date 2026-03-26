@@ -18,6 +18,10 @@ public class TransactionService {
 
     public Transaction saveTransaction(Transaction transaction) {
 
+        System.out.println(
+        "Gateway received fraud: "
+        + transaction.getFraud()
+    );
     try {
         detectionClient.forward(transaction);
         

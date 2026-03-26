@@ -11,90 +11,281 @@ public class SimulationService {
 
     private final Random random = new Random();
 
-    // Simulated customer profiles
-    private final Map<String, String> customerDeviceMap = new HashMap<>();
-    private final List<String> safeCountries = List.of("IN", "SG", "AE");
-    private final List<String> riskyCountries = List.of("RU", "NG", "PK");
-    private final List<String> normalCategories = List.of("GROCERY", "FOOD", "RETAIL", "TRAVEL");
-    private final List<String> riskyCategories = List.of("CRYPTO", "GAMBLING");
-    private final List<String> customers = List.of(
-        "CUST100", "CUST200", "CUST300", "CUST400", "CUST500"
-);
+    // Device tracking
+    private final Map<String, String> customerDeviceMap =
+            new HashMap<>();
+
+    // Spending profile tracking
+    private final Map<String, Double> customerAverageAmount =
+            new HashMap<>();
+
+    // Merchant familiarity tracking
+    private final Map<String, String> customerMerchantMap =
+            new HashMap<>();
+
+    private final List<String> safeCountries =
+            List.of("IN", "SG", "AE");
+
+    private final List<String> riskyCountries =
+            List.of("RU", "NG", "PK");
+
+    private final List<String> normalCategories =
+            List.of(
+                    "GROCERY",
+                    "FOOD",
+                    "RETAIL",
+                    "TRAVEL"
+            );
+
+    private final List<String> riskyCategories =
+            List.of(
+                    "CRYPTO",
+                    "GAMBLING"
+            );
+
+    private final List<String> customers =
+            List.of(
+                    "CUST100",
+                    "CUST200",
+                    "CUST300",
+                    "CUST400",
+                    "CUST500"
+            );
+
     public TransactionRequest generateTransaction() {
 
-        String customerId = randomFrom(customers);
+        String customerId =
+                randomFrom(customers);
 
-        // Decide behavior type
-        int scenario = random.nextInt(100);
+        int scenario =
+                random.nextInt(100);
 
-        if (scenario < 70) {
-            return generateNormalTransaction(customerId);
-        } else if (scenario < 90) {
-            return generateSuspiciousTransaction(customerId);
-        } else {
-            return generateFraudTransaction(customerId);
-        }
+        if (scenario < 70)
+            return generateNormalTransaction(
+                    customerId
+            );
+
+        else if (scenario < 90)
+            return generateSuspiciousTransaction(
+                    customerId
+            );
+
+        else
+            return generateFraudTransaction(
+                    customerId
+            );
     }
 
-    private TransactionRequest generateNormalTransaction(String customerId) {
+    // NORMAL
 
-        String device = customerDeviceMap.computeIfAbsent(
+    private TransactionRequest generateNormalTransaction(
+            String customerId
+    ) {
+
+        String device =
+                customerDeviceMap
+                        .computeIfAbsent(
+                                customerId,
+                                k -> "DEVICE"
+                                        + random.nextInt(50)
+                        );
+
+        String merchant =
+                customerMerchantMap
+                        .computeIfAbsent(
+                                customerId,
+                                k -> "M"
+                                        + random.nextInt(50)
+                        );
+
+        double avg =
+                customerAverageAmount
+                        .getOrDefault(
+                                customerId,
+                                1000.0
+                        );
+
+        double amount =
+                avg
+                        * (
+                        0.5
+                                + random.nextDouble()
+                );
+
+        customerAverageAmount.put(
                 customerId,
-                k -> "DEVICE" + random.nextInt(50)
+                amount
         );
 
         return baseBuilder(customerId)
-                .amount(100 + random.nextDouble() * 5000)
-                .merchantCategory(randomFrom(normalCategories))
+                .amount(amount)
+                .merchantCategory(
+                        randomFrom(
+                                normalCategories
+                        )
+                )
                 .merchantCountry("IN")
                 .customerCountry("IN")
                 .deviceId(device)
+                .merchantId(merchant)
+                .fraud(false)
                 .build();
     }
 
-    private TransactionRequest generateSuspiciousTransaction(String customerId) {
+    // SUSPICIOUS
 
-        boolean newDevice = random.nextBoolean();
+    private TransactionRequest generateSuspiciousTransaction(
+            String customerId
+    ) {
 
-        String device = newDevice
-                ? "DEVICE" + UUID.randomUUID()
-                : customerDeviceMap.computeIfAbsent(customerId,
-                        k -> "DEVICE" + random.nextInt(50));
+        boolean newDevice =
+                random.nextBoolean();
+
+        String device =
+                newDevice
+                        ? "DEVICE"
+                        + UUID.randomUUID()
+                        : customerDeviceMap
+                        .computeIfAbsent(
+                                customerId,
+                                k -> "DEVICE"
+                                        + random.nextInt(50)
+                        );
+
+        double avg =
+                customerAverageAmount
+                        .getOrDefault(
+                                customerId,
+                                1000.0
+                        );
+
+        double amount =
+                avg
+                        * (
+                        2
+                                + random.nextDouble()
+                        * 2
+                );
 
         return baseBuilder(customerId)
-                .amount(20000 + random.nextDouble() * 50000)
-                .merchantCategory(randomFrom(normalCategories))
-                .merchantCountry(randomFrom(safeCountries))
+                .amount(amount)
+                .merchantCategory(
+                        randomFrom(
+                                normalCategories
+                        )
+                )
+                .merchantCountry(
+                        randomFrom(
+                                safeCountries
+                        )
+                )
                 .customerCountry("IN")
                 .deviceId(device)
+                .fraud(false)
                 .build();
     }
 
-    private TransactionRequest generateFraudTransaction(String customerId) {
+    // FRAUD
+
+    private TransactionRequest generateFraudTransaction(
+            String customerId
+    ) {
+
+        double avg =
+                customerAverageAmount
+                        .getOrDefault(
+                                customerId,
+                                1000.0
+                        );
+
+        double amount =
+                avg
+                        * (
+                        3
+                                + random.nextDouble()
+                        * 5
+                );
+
+        LocalDateTime now =
+                LocalDateTime.now();
+
+        if (random.nextDouble() < 0.2) {
+
+            now =
+                    now.withHour(
+                            2
+                                    + random.nextInt(4)
+                    );
+        }
 
         return baseBuilder(customerId)
-                .amount(100000 + random.nextDouble() * 200000)
-                .merchantCategory(randomFrom(riskyCategories))
-                .merchantCountry(randomFrom(riskyCountries))
+                .amount(amount)
+                .merchantCategory(
+                        randomFrom(
+                                riskyCategories
+                        )
+                )
+                .merchantCountry(
+                        randomFrom(
+                                riskyCountries
+                        )
+                )
                 .customerCountry("IN")
-                .deviceId("DEVICE" + UUID.randomUUID())
+                .deviceId(
+                        "DEVICE"
+                                + UUID.randomUUID()
+                )
+                .timestamp(now)
+                .fraud(true)
                 .build();
     }
 
-    private TransactionRequest.TransactionRequestBuilder baseBuilder(String customerId) {
-        return TransactionRequest.builder()
-                .transactionId(UUID.randomUUID().toString())
-                .accountId("ACC" + random.nextInt(500))
+    private TransactionRequest.TransactionRequestBuilder
+    baseBuilder(String customerId) {
+
+        return TransactionRequest
+                .builder()
+
+                .transactionId(
+                        UUID.randomUUID()
+                                .toString()
+                )
+
+                .accountId(
+                        "ACC"
+                                + random.nextInt(500)
+                )
+
                 .customerId(customerId)
+
                 .transactionType("DEBIT")
+
                 .channel("MOBILE_APP")
+
                 .currency("INR")
-                .merchantId("M" + random.nextInt(300))
-                .ipAddress("192.168.1." + random.nextInt(255))
-                .timestamp(LocalDateTime.now());
+
+                .merchantId(
+                        "M"
+                                + random.nextInt(300)
+                )
+
+                .ipAddress(
+                        "192.168.1."
+                                + random.nextInt(255)
+                )
+
+                .timestamp(
+                        LocalDateTime.now()
+                );
     }
 
-    private String randomFrom(List<String> list) {
-        return list.get(random.nextInt(list.size()));
+    private String randomFrom(
+            List<String> list
+    ) {
+        return list.get(
+                random.nextInt(
+                        list.size()
+                )
+        );
     }
 }

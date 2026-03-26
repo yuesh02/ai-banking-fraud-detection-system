@@ -25,4 +25,7 @@ public class TransactionRequest {
     private String deviceId;
     private String ipAddress;
     private LocalDateTime timestamp;
+
+    // NEW — Ground truth label
+    private Boolean fraud;
 }

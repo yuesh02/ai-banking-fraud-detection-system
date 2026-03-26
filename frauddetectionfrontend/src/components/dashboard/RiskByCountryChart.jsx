@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
 
 import {
@@ -6,131 +7,121 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
+  CartesianGrid
 } from "recharts";
 
-import {
-  getRiskByCountry
-} from "../../services/countryService";
+import { getRiskByCountry } from "../../services/countryService";
+
+/* Tooltip */
+function CustomTooltip({ active, payload, label }) {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white border border-gray-200 shadow-lg rounded-lg px-3 py-2 text-sm">
+        <p className="text-gray-400">{label}</p>
+        <p className="text-gray-900 font-semibold">
+          {payload[0].value} frauds
+        </p>
+      </div>
+    );
+  }
+  return null;
+}
 
 function RiskByCountryChart() {
 
-  const [data,
-    setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [seconds, setSeconds] = useState(15);
+  const [animateKey, setAnimateKey] = useState(0); // 🔥 for animation reset
 
-  const [seconds,
-    setSeconds] = useState(15);
-
-  /* Fetch country risk */
-
-  useEffect(() => {
-
-    fetchCountries();
-
-    const interval =
-      setInterval(
-        fetchCountries,
-        15000
-      );
-
-    return () =>
-      clearInterval(interval);
-
-  }, []);
-
-  /* Countdown timer */
-
-  useEffect(() => {
-
-    const timer =
-      setInterval(() => {
-
-        setSeconds(prev =>
-          prev === 0 ? 15 : prev - 1
-        );
-
-      }, 1000);
-
-    return () =>
-      clearInterval(timer);
-
-  }, []);
-
-  const fetchCountries =
-    async () => {
-
+  const fetchCountries = async () => {
     try {
-
-      const result =
-        await getRiskByCountry();
+      const result = await getRiskByCountry();
 
       setData(result);
-
       setSeconds(15);
 
+      // 🔥 trigger animation on refresh
+      setAnimateKey(prev => prev + 1);
+
     } catch (error) {
-
-      console.error(
-        "Country fetch error:",
-        error
-      );
-
+      console.error("Country fetch error:", error);
     }
-
   };
 
+  useEffect(() => {
+    fetchCountries();
+    const interval = setInterval(fetchCountries, 15000);
+    return () => clearInterval(interval);
+  }, []);
+
+  /* Countdown */
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeconds(prev => (prev === 0 ? 15 : prev - 1));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm mt-6 transition-all duration-300">
 
-    <div className="bg-white shadow rounded-xl p-5 mt-6">
-
-      <div className="flex justify-between mb-4">
-
-        <h2 className="text-lg font-semibold">
-
+      {/* Header */}
+      <div className="flex justify-between items-center px-5 py-4 border-b border-gray-100">
+        <h2 className="text-base font-semibold text-gray-800">
           Risk by Country
-
         </h2>
 
-        <div className="text-sm text-gray-500">
-
-          Refreshing in
-
-          <span className="font-bold ml-1">
-
-            {seconds}s
-
-          </span>
-
-        </div>
-
+        <span className="text-xs text-gray-400">
+          {seconds}s refresh
+        </span>
       </div>
 
-      <ResponsiveContainer
-        width="100%"
-        height={300}
-      >
+      {/* Chart */}
+      <div className="p-5">
+        <ResponsiveContainer width="100%" height={280}>
+          <BarChart key={animateKey} data={data}>
 
-        <BarChart data={data}>
+            {/* Grid */}
+            <CartesianGrid stroke="#f1f5f9" vertical={false} />
 
-          <XAxis dataKey="country" />
+            {/* X Axis */}
+            <XAxis
+              dataKey="country"
+              tick={{ fontSize: 12, fill: "#475569", fontWeight: 500 }}
+              axisLine={{ stroke: "#e2e8f0" }}
+              tickLine={false}
+              interval={0}
+            />
 
-          <YAxis />
+            {/* Y Axis */}
+            <YAxis
+              tick={{ fontSize: 12, fill: "#475569", fontWeight: 500 }}
+              axisLine={{ stroke: "#e2e8f0" }}
+              tickLine={false}
+            />
 
-          <Tooltip />
+            {/* Tooltip */}
+            <Tooltip content={<CustomTooltip />} />
 
-          <Bar
-            dataKey="fraudCount"
-            radius={[6, 6, 0, 0]}
-          />
+            {/* Bars */}
+            <Bar
+              dataKey="fraudCount"
+              radius={[8, 8, 0, 0]}
+              barSize={40}
+              fill="#4f46e5"
+              isAnimationActive={true}
+              animationDuration={800}
+              animationEasing="ease-out"
+            />
 
-        </BarChart>
-
-      </ResponsiveContainer>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
 
     </div>
-
   );
-
 }
 
 export default RiskByCountryChart;
