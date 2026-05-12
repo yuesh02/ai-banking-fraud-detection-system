@@ -9,8 +9,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 @RestController
-@RequestMapping("/detect")
+@RequestMapping({"/detect", "/api/v1/transactions"})
 @RequiredArgsConstructor
+@CrossOrigin
 public class DetectionController {
 
     private final DetectionService detectionService;

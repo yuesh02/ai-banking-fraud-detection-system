@@ -7,6 +7,8 @@ import com.fraud.detection_core.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class AuthService {
@@ -15,10 +17,23 @@ public class AuthService {
 
     public LoginResponseDTO login(LoginRequestDTO request) {
 
-        User user = userRepository
-                .findByUsername(request.getUsername())
-                .orElseThrow(() ->
-                        new RuntimeException("User not found"));
+        Optional<User> optionalUser = userRepository.findByUsername(request.getUsername());
+        User user;
+
+        if (optionalUser.isEmpty()) {
+            if ("admin".equals(request.getUsername())) {
+                // Auto-create admin user for demo purposes if it doesn't exist
+                user = new User();
+                user.setUsername("admin");
+                user.setPassword("admin");
+                user.setRole("ADMIN");
+                userRepository.save(user);
+            } else {
+                throw new RuntimeException("User not found");
+            }
+        } else {
+            user = optionalUser.get();
+        }
 
         if (!user.getPassword().equals(request.getPassword())) {
             throw new RuntimeException("Invalid password");

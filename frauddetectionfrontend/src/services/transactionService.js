@@ -64,3 +64,15 @@ export const getTransactionDetails =
   return res.data;
 
 };
+
+export const updateTransactionAction = async (transactionId, action) => {
+  const res = await apiClient.put(
+    `/dashboard/transactions/${transactionId}/action?action=${action}`
+  );
+  return res.data;
+};
+
+export const getReviewQueue = async () => {
+  const res = await apiClient.get("/dashboard/cases/review");
+  return res.data;
+};

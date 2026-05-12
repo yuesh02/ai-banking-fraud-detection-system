@@ -14,28 +14,33 @@ import java.time.LocalDateTime;
 public class TransactionDetailsDTO {
 
     private String transactionId;
-
     private String customerId;
-
     private String customerName;
 
+    // Transaction fields
+    private String accountId;
+    private String transactionType;
+    private String channel;
     private Double amount;
+    private String currency;
 
+    // Merchant fields
     private String merchantId;
-
+    private String merchantCategory;
     private String merchantCountry;
 
+    // Customer location & device
+    private String customerCountry;
     private String deviceId;
+    private String ipAddress;
 
+    // Risk fields
     private Double riskScore;
-
     private RiskLevel riskLevel;
-
     private RiskAction action;
-
     private Boolean fraud;
-
     private String reason;
+    private String riskAnalysis;
 
     private LocalDateTime timestamp;
 

@@ -12,24 +12,34 @@ public class DetectionClient {
 
     private final RestTemplate restTemplate;
 
+    @org.springframework.beans.factory.annotation.Value("${detection.core.url:http://localhost:8082/detect}")
+    private String detectionCoreUrl;
+
     public DetectionClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
     public void forward(Transaction txn) {
 
-        String url = "http://localhost:8082/detect";
+        String url = detectionCoreUrl;
 
         // Map Entity → DTO for Detection Core
         TransactionEventDTO dto = TransactionEventDTO.builder()
                 .transactionId(txn.getTransactionId())
+                .accountId(txn.getAccountId())
                 .customerId(txn.getCustomerId())
+                .transactionType(txn.getTransactionType())
+                .channel(txn.getChannel())
                 .amount(txn.getAmount())
+                .currency(txn.getCurrency())
+                .merchantId(txn.getMerchantId())
+                .merchantCategory(txn.getMerchantCategory())
+                .merchantCountry(txn.getMerchantCountry())
+                .customerCountry(txn.getCustomerCountry())
                 .deviceId(txn.getDeviceId())
                 .ipAddress(txn.getIpAddress())
-                .merchantCountry(txn.getMerchantCountry())
-                .merchantCategory(txn.getMerchantCategory())
                 .timestamp(txn.getTimestamp())
+                .fraud(txn.getFraud())
                 .build();
 
         try {

@@ -1,0 +1,788 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.016242153949771236, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.8419978085820313e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:33.340492"}
+127.0.0.1 - - [01/May/2026 14:58:33] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.098194485887869, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.3215667068249345e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:35.955997"}
+127.0.0.1 - - [01/May/2026 14:58:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.010861927906244042, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 9.906563043246656e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:38.967711"}
+127.0.0.1 - - [01/May/2026 14:58:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 159.05866616991057, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 0.02823358763109683, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:41.967847"}
+127.0.0.1 - - [01/May/2026 14:58:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.10776862540973675, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.4533168564216577e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:44.974036"}
+127.0.0.1 - - [01/May/2026 14:58:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.008550310077304106, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 7.813118235815305e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:47.981615"}
+127.0.0.1 - - [01/May/2026 14:58:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.07369867197980455, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 9.958453246436995e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:50.963410"}
+127.0.0.1 - - [01/May/2026 14:58:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.019979113725544947, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.8291259887110456e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:53.952934"}
+127.0.0.1 - - [01/May/2026 14:58:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.011291619976525091, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.0357309668632506e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:56.965917"}
+127.0.0.1 - - [01/May/2026 14:58:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.5139459367135616, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.19303333674448e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:58:59.969597"}
+127.0.0.1 - - [01/May/2026 14:58:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.2647085744200372, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.583956718686258e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:02.975361"}
+127.0.0.1 - - [01/May/2026 14:59:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0343864557719933, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.160093044046577e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:05.968522"}
+127.0.0.1 - - [01/May/2026 14:59:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.050910142612952895, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.906529902783064e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:08.988551"}
+127.0.0.1 - - [01/May/2026 14:59:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 157.83877312414293, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02806701602387304, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:11.973300"}
+127.0.0.1 - - [01/May/2026 14:59:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.007143221006493721, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.576983296415493e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:14.959943"}
+127.0.0.1 - - [01/May/2026 14:59:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0006, "predicted_fraud": 0, "features": {"amount": 0.007313483330326807, "velocity": 6, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.746454233330244e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:17.962550"}
+127.0.0.1 - - [01/May/2026 14:59:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 60.39583727501637, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.010759093797450724, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:20.972348"}
+127.0.0.1 - - [01/May/2026 14:59:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 229.0450044267802, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04087430197755445, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:23.977845"}
+127.0.0.1 - - [01/May/2026 14:59:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.057322737820829944, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 7.791868951422885e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:26.968692"}
+127.0.0.1 - - [01/May/2026 14:59:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.004775847008871146, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.427178954366621e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:29.960224"}
+127.0.0.1 - - [01/May/2026 14:59:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.45918688559029114, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.543549591884469e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:32.963751"}
+127.0.0.1 - - [01/May/2026 14:59:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.005631742848668416, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.204886094795565e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:35.983496"}
+127.0.0.1 - - [01/May/2026 14:59:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.36618934072764475, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.429096382414539e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:38.972398"}
+127.0.0.1 - - [01/May/2026 14:59:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 0.028050920021722676, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 2.5973537205207056e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:41.969473"}
+127.0.0.1 - - [01/May/2026 14:59:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.21332260619604113, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.9054206131472985e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:44.957138"}
+127.0.0.1 - - [01/May/2026 14:59:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.20057267460252978, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.7371564902636156e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:47.989533"}
+127.0.0.1 - - [01/May/2026 14:59:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.06638153576862556, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 9.076725887551753e-06, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:50.984842"}
+127.0.0.1 - - [01/May/2026 14:59:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 0.31287123246072857, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 4.286471243979993e-05, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:53.965621"}
+127.0.0.1 - - [01/May/2026 14:59:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.005186914686769915, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.906215894650441e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:56.975988"}
+127.0.0.1 - - [01/May/2026 14:59:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.004407643029719541, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.0888807991341314e-07, "timeOfDay": 14, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T14:59:59.980836"}
+127.0.0.1 - - [01/May/2026 14:59:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 56.734618332729084, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.010142883211845697, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:02.974077"}
+127.0.0.1 - - [01/May/2026 15:00:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 0.019159507669206214, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 2.1860458600141487e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:05.963288"}
+127.0.0.1 - - [01/May/2026 15:00:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 57.48326097022359, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01029525007293847, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:08.979934"}
+127.0.0.1 - - [01/May/2026 15:00:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 2.0315322430511737, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 0.00024617415120617057, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:11.959585"}
+127.0.0.1 - - [01/May/2026 15:00:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 152.1408067795311, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.027296603514349406, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:14.959909"}
+127.0.0.1 - - [01/May/2026 15:00:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.005932483330085041, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.782415683529507e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:17.969820"}
+127.0.0.1 - - [01/May/2026 15:00:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.06514850124486057, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 8.943127598194347e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:20.973217"}
+127.0.0.1 - - [01/May/2026 15:00:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 123.79849570985171, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02225093353768281, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:23.980559"}
+127.0.0.1 - - [01/May/2026 15:00:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.010327764635145564, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 9.59879887618087e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:26.964530"}
+127.0.0.1 - - [01/May/2026 15:00:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.004634133679621637, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.3150926496433823e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:29.956821"}
+127.0.0.1 - - [01/May/2026 15:00:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.006405605994191117, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.975734376986893e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:32.972764"}
+127.0.0.1 - - [01/May/2026 15:00:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.006526390212984338, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.099750748806457e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:35.978904"}
+127.0.0.1 - - [01/May/2026 15:00:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0047, "predicted_fraud": 0, "features": {"amount": 216.79033290371663, "velocity": 9, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 0.039032662795649334, "timeOfDay": 3, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:38.981635"}
+127.0.0.1 - - [01/May/2026 15:00:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 36.93606383270669, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.006662209574398418, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:41.965855"}
+127.0.0.1 - - [01/May/2026 15:00:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 135.48884121778246, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02448134463030196, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:44.956398"}
+127.0.0.1 - - [01/May/2026 15:00:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.07571988222419074, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.0414633224423364e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:47.977820"}
+127.0.0.1 - - [01/May/2026 15:00:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.020141553398888068, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.3073423631486085e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:50.967533"}
+127.0.0.1 - - [01/May/2026 15:00:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0047, "predicted_fraud": 0, "features": {"amount": 0.03256466151852444, "velocity": 7, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 3.7379638903282648e-06, "timeOfDay": 3, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:53.960746"}
+127.0.0.1 - - [01/May/2026 15:00:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.005632620527914294, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.478384910055698e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:56.973020"}
+127.0.0.1 - - [01/May/2026 15:00:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 41.39627989432213, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.007493229069913747, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:00:59.974512"}
+127.0.0.1 - - [01/May/2026 15:00:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0037548021763628733, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.327223291416195e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:02.961535"}
+127.0.0.1 - - [01/May/2026 15:01:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 57.53136955854668, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.010432410717907197, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:05.956949"}
+127.0.0.1 - - [01/May/2026 15:01:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.004242160398332897, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.898618270997949e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:08.975089"}
+127.0.0.1 - - [01/May/2026 15:01:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.017078760500182987, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.599196714573864e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:11.957641"}
+127.0.0.1 - - [01/May/2026 15:01:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.3625415221667705, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.4013351269607064e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:14.961567"}
+127.0.0.1 - - [01/May/2026 15:01:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 1.1748608999413381, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0001428958147250376, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:17.958267"}
+127.0.0.1 - - [01/May/2026 15:01:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 53.61088223137522, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.009738775219543153, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:20.959945"}
+127.0.0.1 - - [01/May/2026 15:01:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.3282959369512977, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.000401014850711e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:23.959945"}
+127.0.0.1 - - [01/May/2026 15:01:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 68.68304418654446, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01249881448526984, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:26.978690"}
+127.0.0.1 - - [01/May/2026 15:01:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0479344123378376, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.605852253517766e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:29.978832"}
+127.0.0.1 - - [01/May/2026 15:01:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 1.1169134743560787, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.00013635182245199515, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:32.961256"}
+127.0.0.1 - - [01/May/2026 15:01:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 166.30231754706588, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03031588810584342, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:35.985609"}
+127.0.0.1 - - [01/May/2026 15:01:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 461.6089718840204, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 0.08428607204364721, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:01:38.980701"}
+127.0.0.1 - - [01/May/2026 15:01:38] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 249.7546868254262, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 0.04568076549196896, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:05:51.289319"}
+127.0.0.1 - - [01/May/2026 15:05:51] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.15056784010228869, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.841516624750723e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:05:53.962211"}
+127.0.0.1 - - [01/May/2026 15:05:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0011729696324717272, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.1003663571486249e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:05:56.967654"}
+127.0.0.1 - - [01/May/2026 15:05:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.035214233975851106, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.871800910900787e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:05:59.966264"}
+127.0.0.1 - - [01/May/2026 15:05:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0944218818356479, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.1569553772698411e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:02.964186"}
+127.0.0.1 - - [01/May/2026 15:06:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0010560074994863536, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.2242691547236425e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:05.985837"}
+127.0.0.1 - - [01/May/2026 15:06:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00028364545582281353, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.2949199977202205e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:08.973374"}
+127.0.0.1 - - [01/May/2026 15:06:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00031697135315133493, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.6893214781974974e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:11.970659"}
+127.0.0.1 - - [01/May/2026 15:06:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 78.70907230326411, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.014421335299241743, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:14.959112"}
+127.0.0.1 - - [01/May/2026 15:06:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 134.91598007927757, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.024762569886226143, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:17.960178"}
+127.0.0.1 - - [01/May/2026 15:06:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 33.72957509744227, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.006201657372081504, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:20.960579"}
+127.0.0.1 - - [01/May/2026 15:06:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0002486258472911053, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.899536068215362e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:23.961899"}
+127.0.0.1 - - [01/May/2026 15:06:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.007476233136132146, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.0363264775671133e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:26.970681"}
+127.0.0.1 - - [01/May/2026 15:06:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.010285501232781298, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.4284993901827076e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:29.964259"}
+127.0.0.1 - - [01/May/2026 15:06:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0002724341916038597, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.183449183188452e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:32.954781"}
+127.0.0.1 - - [01/May/2026 15:06:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0047, "predicted_fraud": 0, "features": {"amount": 0.04168411240288834, "velocity": 18, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 5.800485812124942e-06, "timeOfDay": 2, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:35.972604"}
+127.0.0.1 - - [01/May/2026 15:06:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0013592898037321805, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.277515268660652e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:38.955260"}
+127.0.0.1 - - [01/May/2026 15:06:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.000353090707796681, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.134043018209149e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:41.986379"}
+127.0.0.1 - - [01/May/2026 15:06:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.032400012080696615, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 4.5172754879040514e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:44.963185"}
+127.0.0.1 - - [01/May/2026 15:06:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.013931990907996355, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.9461690935199322e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:47.966144"}
+127.0.0.1 - - [01/May/2026 15:06:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.01083110278061694, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.515913583327905e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:50.959314"}
+127.0.0.1 - - [01/May/2026 15:06:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0012075374559709971, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.4165765157961886e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:53.970516"}
+127.0.0.1 - - [01/May/2026 15:06:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0702637563094603, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 8.625303467297926e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:56.968468"}
+127.0.0.1 - - [01/May/2026 15:06:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 17.5759534658416, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0032372876609224085, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:06:59.972333"}
+127.0.0.1 - - [01/May/2026 15:06:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.05147733935762583, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.330772540809265e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:02.984125"}
+127.0.0.1 - - [01/May/2026 15:07:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.06386721748597338, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 7.868913073023507e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:05.974266"}
+127.0.0.1 - - [01/May/2026 15:07:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.011468724112304264, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.6082355257724622e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:08.964337"}
+127.0.0.1 - - [01/May/2026 15:07:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 0.39850923356885687, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 4.9189202936473134e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:11.966863"}
+127.0.0.1 - - [01/May/2026 15:07:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 37.989899700559576, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.007009576881509376, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:14.974021"}
+127.0.0.1 - - [01/May/2026 15:07:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.14204034013691655, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.7564521318360303e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:17.971382"}
+127.0.0.1 - - [01/May/2026 15:07:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00020399447956939555, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.3977665794250973e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:20.972684"}
+127.0.0.1 - - [01/May/2026 15:07:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.001844077275303235, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.7363416288171133e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:23.965612"}
+127.0.0.1 - - [01/May/2026 15:07:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 18.12998312033966, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.003351072091136464, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:26.977800"}
+127.0.0.1 - - [01/May/2026 15:07:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0014905564456773185, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.4060638136441675e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:29.978930"}
+127.0.0.1 - - [01/May/2026 15:07:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0031490099833791202, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.9759779692122077e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:32.965768"}
+127.0.0.1 - - [01/May/2026 15:07:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.039749194091112404, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.584625497582926e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:35.966953"}
+127.0.0.1 - - [01/May/2026 15:07:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.04520000830110974, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.362588474360895e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:38.972532"}
+127.0.0.1 - - [01/May/2026 15:07:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.014925396087283705, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.104985941700571e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:41.963119"}
+127.0.0.1 - - [01/May/2026 15:07:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 0.42620380503732647, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 5.279997073423436e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:44.973393"}
+127.0.0.1 - - [01/May/2026 15:07:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.07525415486822273, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 9.339791466146246e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:47.960922"}
+127.0.0.1 - - [01/May/2026 15:07:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00029950543749712657, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.5272854202076836e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:50.968979"}
+127.0.0.1 - - [01/May/2026 15:07:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.20106088995839222, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.4999031686598656e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:53.957657"}
+127.0.0.1 - - [01/May/2026 15:07:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.003234552708216043, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.0624394398201255e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:56.970668"}
+127.0.0.1 - - [01/May/2026 15:07:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 20.564192663165127, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0038076678723857876, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:07:59.962729"}
+127.0.0.1 - - [01/May/2026 15:07:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.09536510214995883, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.187879901560648e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:02.977748"}
+127.0.0.1 - - [01/May/2026 15:08:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0054737429029982675, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.191989575683567e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:05.970899"}
+127.0.0.1 - - [01/May/2026 15:08:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 77.13097189119533, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.014306318456379743, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:08.970320"}
+127.0.0.1 - - [01/May/2026 15:08:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.12699491484459488, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.5847305431327012e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:11.989724"}
+127.0.0.1 - - [01/May/2026 15:08:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 23.952207305192136, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0044504353220572845, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:14.963261"}
+127.0.0.1 - - [01/May/2026 15:08:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0016069674480803343, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.5270426946576895e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:17.956200"}
+127.0.0.1 - - [01/May/2026 15:08:17] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0017289816486715237, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.6459919843749967e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:20.962648"}
+127.0.0.1 - - [01/May/2026 15:08:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.11073534774223126, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.384331156629257e-05, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:23.976891"}
+127.0.0.1 - - [01/May/2026 15:08:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.000974954099573328, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.1504448794839685e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:26.964907"}
+127.0.0.1 - - [01/May/2026 15:08:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00042528807573936016, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.028158528874177e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:29.979005"}
+127.0.0.1 - - [01/May/2026 15:08:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0005189444771601296, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 6.147366732733138e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:32.967698"}
+127.0.0.1 - - [01/May/2026 15:08:32] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.03785590664241857, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 5.349133326790068e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:35.975733"}
+127.0.0.1 - - [01/May/2026 15:08:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00026116803209600586, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 3.099767255618748e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:38.964659"}
+127.0.0.1 - - [01/May/2026 15:08:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.00020640872885017332, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 2.454575220227332e-08, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:41.963896"}
+127.0.0.1 - - [01/May/2026 15:08:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.05767200107251443, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 8.164689170173207e-06, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:44.972236"}
+127.0.0.1 - - [01/May/2026 15:08:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 0.0012598977601621947, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.2016124569740103e-07, "timeOfDay": 15, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T15:08:47.951249"}
+127.0.0.1 - - [01/May/2026 15:08:47] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 53.683487911455586, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.014264545406329283, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:13:56.114990"}
+127.0.0.1 - - [01/May/2026 15:13:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0017, "predicted_fraud": 0, "features": {"amount": 7609.152727422439, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 2.908270354138409, "timeOfDay": 2, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:13:59.086591"}
+127.0.0.1 - - [01/May/2026 15:13:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 83.34920884152373, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.042029215756248225, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:14:02.102846"}
+127.0.0.1 - - [01/May/2026 15:14:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 65.36738983227997, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.0, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:14:41.100307"}
+127.0.0.1 - - [01/May/2026 15:14:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 31.744238141052456, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.010636385296681561, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:14:53.094142"}
+127.0.0.1 - - [01/May/2026 15:14:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 81.25956623353483, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.0, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:14:59.086218"}
+127.0.0.1 - - [01/May/2026 15:14:59] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 83.33567240616722, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.012613403581965, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:16:11.475688"}
+127.0.0.1 - - [01/May/2026 15:16:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 92.02285011141069, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.41994622609225074, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:16:20.484711"}
+127.0.0.1 - - [01/May/2026 15:16:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 98.233162437588, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 1.1212619568693478, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:16:23.594752"}
+127.0.0.1 - - [01/May/2026 15:16:23] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 46.91785069743659, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.19479172755727042, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:16:41.577729"}
+127.0.0.1 - - [01/May/2026 15:16:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 27.087270855684814, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029565151875932064, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:16:44.478561"}
+127.0.0.1 - - [01/May/2026 15:16:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 40.731810139566235, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.052879254822163345, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:17:14.661730"}
+127.0.0.1 - - [01/May/2026 15:17:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 99.92654519537513, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.08564675848020059, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:17:29.489046"}
+127.0.0.1 - - [01/May/2026 15:17:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 106.58967577896176, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.15780151731394035, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:17:41.485037"}
+127.0.0.1 - - [01/May/2026 15:17:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 71.4508937585795, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.11909181850265628, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:17:44.615800"}
+127.0.0.1 - - [01/May/2026 15:17:44] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 33.020284393837734, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06149361695121414, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:17:53.479805"}
+127.0.0.1 - - [01/May/2026 15:17:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 104.3843292611186, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.09842987219699433, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:11.487766"}
+127.0.0.1 - - [01/May/2026 15:18:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.6445779077469, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.11256525033504627, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:20.545926"}
+127.0.0.1 - - [01/May/2026 15:18:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 40.943641511507025, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03130339880806419, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:20.635165"}
+127.0.0.1 - - [01/May/2026 15:18:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 94.56568210517835, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.07835775550621255, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:35.636775"}
+127.0.0.1 - - [01/May/2026 15:18:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 51.27310145801172, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03766853879495649, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:56.505958"}
+127.0.0.1 - - [01/May/2026 15:18:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 86.24540257493139, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06758141165681437, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:18:56.630611"}
+127.0.0.1 - - [01/May/2026 15:18:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.23685936088003, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.039326740111787696, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:19:05.479053"}
+127.0.0.1 - - [01/May/2026 15:19:05] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.9996, "predicted_fraud": 1, "features": {"amount": 5000, "velocity": 1, "newDevice": 1, "newCountry": 0, "highRiskMerchant": 1, "rollingAvgRatio": 1.5, "timeOfDay": 2, "ipRiskScore": 0.8}, "timestamp": "2026-05-01T15:22:47.877629"}
+127.0.0.1 - - [01/May/2026 15:22:47] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 101.812870615964, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0439718914325083, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:25:57.547052"}
+127.0.0.1 - - [01/May/2026 15:25:57] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 26.73924150696015, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01206698548592605, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:03.437129"}
+127.0.0.1 - - [01/May/2026 15:26:03] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 90.42192790146616, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.056751776723126424, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:06.439006"}
+127.0.0.1 - - [01/May/2026 15:26:06] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 62.84270405178647, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02578099842897194, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:42.440471"}
+127.0.0.1 - - [01/May/2026 15:26:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 92.95541001169144, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06108078873389544, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:42.509365"}
+127.0.0.1 - - [01/May/2026 15:26:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 39.558151818479416, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.016866787466531745, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:48.435581"}
+127.0.0.1 - - [01/May/2026 15:26:48] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 89.22402584061498, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.039448783379735584, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:51.490358"}
+127.0.0.1 - - [01/May/2026 15:26:51] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 24.456960180571546, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.012673738875441034, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:26:51.582943"}
+127.0.0.1 - - [01/May/2026 15:26:51] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 92.95773018703416, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06380540529481243, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:27:42.435137"}
+127.0.0.1 - - [01/May/2026 15:27:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 86.0756274307301, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04684254731826579, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:27:57.424601"}
+127.0.0.1 - - [01/May/2026 15:27:57] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 44.19916016792746, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02600386046889416, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:06.573843"}
+127.0.0.1 - - [01/May/2026 15:28:06] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 48.505330010665574, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029691076706487397, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:18.437682"}
+127.0.0.1 - - [01/May/2026 15:28:18] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 105.81394084803162, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06028980336339749, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:18.598154"}
+127.0.0.1 - - [01/May/2026 15:28:18] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 99.83069096205082, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04076246722715152, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:21.465360"}
+127.0.0.1 - - [01/May/2026 15:28:21] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 94.63391775123998, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05143900589248236, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:27.438096"}
+127.0.0.1 - - [01/May/2026 15:28:27] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 31.35411668870926, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01869948463972724, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:30.454990"}
+127.0.0.1 - - [01/May/2026 15:28:30] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 83.36145135856712, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03517025114102745, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:28:45.457804"}
+127.0.0.1 - - [01/May/2026 15:28:45] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 74.31781532395973, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04307363158720973, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:29:03.437667"}
+127.0.0.1 - - [01/May/2026 15:29:03] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 56.90590764875292, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03420706058652908, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:29:09.624079"}
+127.0.0.1 - - [01/May/2026 15:29:09] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 110.71922237903689, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04689883749518029, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:29:21.553257"}
+127.0.0.1 - - [01/May/2026 15:29:21] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 35.790918498655735, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01891824153721442, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:29:27.519471"}
+127.0.0.1 - - [01/May/2026 15:29:27] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 89.24637156807519, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.048669463513336175, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:29:36.504435"}
+127.0.0.1 - - [01/May/2026 15:29:36] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 58.39639886936632, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03236555206047974, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:30:45.551895"}
+127.0.0.1 - - [01/May/2026 15:30:45] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 41.342946381779385, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.018239384111632524, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:31:00.523244"}
+127.0.0.1 - - [01/May/2026 15:31:00] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 48.90514111255517, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.027422572362981568, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:31:15.502796"}
+127.0.0.1 - - [01/May/2026 15:31:15] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 85.7007806926749, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.048867717422666816, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:31:18.419345"}
+127.0.0.1 - - [01/May/2026 15:31:18] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 31.184749430246455, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01802281572425854, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:31:24.493686"}
+127.0.0.1 - - [01/May/2026 15:31:24] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 117.19309439543419, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.054575179891658304, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:33:08.497744"}
+127.0.0.1 - - [01/May/2026 15:33:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 27.11035945500498, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.016292464265512466, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:33:20.552019"}
+127.0.0.1 - - [01/May/2026 15:33:20] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 65.21497604795562, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.028648908265718677, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:33:38.462654"}
+127.0.0.1 - - [01/May/2026 15:33:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 56.69652660927839, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03588066757316333, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:33:50.460681"}
+127.0.0.1 - - [01/May/2026 15:33:50] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 89.79969460463595, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.058202537436516065, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:33:56.464648"}
+127.0.0.1 - - [01/May/2026 15:33:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 39.68704773853365, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026348780991057977, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:34:14.448592"}
+127.0.0.1 - - [01/May/2026 15:34:14] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 61.18552712115593, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.040194334082174245, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:35:05.461109"}
+127.0.0.1 - - [01/May/2026 15:35:05] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 54.30762965333799, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03252275575454029, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:35:26.507934"}
+127.0.0.1 - - [01/May/2026 15:35:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 74.34815862006761, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0402817583914674, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:35:53.456071"}
+127.0.0.1 - - [01/May/2026 15:35:53] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 62.528206409584534, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.034559114540991344, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:36:02.459931"}
+127.0.0.1 - - [01/May/2026 15:36:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 64.28769825897994, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.036954425732984304, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:36:20.459572"}
+127.0.0.1 - - [01/May/2026 15:36:20] "POST /predict HTTP/1.1" 200 -
+ * Detected change in 'C:\\Users\\yujesh\\Desktop\\infosys internship\\fraud-detection-system\\fraud-ml-service\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+ * Detected change in 'C:\\Users\\yujesh\\Desktop\\infosys internship\\fraud-detection-system\\fraud-ml-service\\training\\generate_training_data.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 41.455840823112716, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.024285922109266476, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:37:20.458130"}
+127.0.0.1 - - [01/May/2026 15:37:20] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 28.273820990324253, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.013859108227584606, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:39:36.843091"}
+127.0.0.1 - - [01/May/2026 15:39:36] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 53.74207822884995, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029368983374287918, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:39:42.856889"}
+127.0.0.1 - - [01/May/2026 15:39:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 55.08759750919832, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02558847427626306, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:40:00.844349"}
+127.0.0.1 - - [01/May/2026 15:40:00] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 78.23773847675031, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.034901727761768926, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:40:15.847003"}
+127.0.0.1 - - [01/May/2026 15:40:15] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 29.682612960922366, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.016153753985321723, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:40:24.955032"}
+127.0.0.1 - - [01/May/2026 15:40:24] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 50.55277984255959, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.022588382467723527, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:40:48.960140"}
+127.0.0.1 - - [01/May/2026 15:40:48] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 99.88890744934886, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04538063366571207, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:00.850305"}
+127.0.0.1 - - [01/May/2026 15:41:00] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 65.68967295298039, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.036343341085576554, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:00.974040"}
+127.0.0.1 - - [01/May/2026 15:41:00] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 113.17781588689402, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.052258119908019915, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:06.856346"}
+127.0.0.1 - - [01/May/2026 15:41:06] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 36.691868428421444, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.020637040431533762, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:12.942515"}
+127.0.0.1 - - [01/May/2026 15:41:12] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 119.75715199438362, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06840224610924417, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:42.855168"}
+127.0.0.1 - - [01/May/2026 15:41:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 93.10430817825063, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04368628970370494, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:41:57.851359"}
+127.0.0.1 - - [01/May/2026 15:41:57] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 37.82032639657785, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.021948369378215444, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:06.956057"}
+127.0.0.1 - - [01/May/2026 15:42:06] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 100.15393744810775, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04773995166265223, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:07.082345"}
+127.0.0.1 - - [01/May/2026 15:42:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 70.10011457706801, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04131042911305568, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:12.947535"}
+127.0.0.1 - - [01/May/2026 15:42:12] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 103.72172181968153, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04860699563127214, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:30.844577"}
+127.0.0.1 - - [01/May/2026 15:42:30] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 107.5957804046075, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.051158536808466326, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:42.996019"}
+127.0.0.1 - - [01/May/2026 15:42:42] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 97.49708137109886, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.047026258349333376, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:42:54.859015"}
+127.0.0.1 - - [01/May/2026 15:42:54] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.01079244446538, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.031534692374765076, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:43:51.898925"}
+127.0.0.1 - - [01/May/2026 15:43:51] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 22.372151986693794, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01036755225542991, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:43:52.102187"}
+127.0.0.1 - - [01/May/2026 15:43:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 63.828516421363595, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029983096191739375, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:44:09.888995"}
+127.0.0.1 - - [01/May/2026 15:44:09] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 100.69304669459025, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05654593294439103, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:44:25.001586"}
+127.0.0.1 - - [01/May/2026 15:44:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 56.60750015490437, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026950430310752692, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:45:00.881033"}
+127.0.0.1 - - [01/May/2026 15:45:00] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 61.09632377191167, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03479670164128575, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:45:27.889308"}
+127.0.0.1 - - [01/May/2026 15:45:27] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.3310791366617, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0623204255582286, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:45:36.898508"}
+127.0.0.1 - - [01/May/2026 15:45:36] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 71.26338684293691, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03416844637153323, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:45:54.975895"}
+127.0.0.1 - - [01/May/2026 15:45:54] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 111.71229481456527, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05118814272509463, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:46:25.010449"}
+127.0.0.1 - - [01/May/2026 15:46:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 94.19418207689333, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04369026889448717, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:46:27.881589"}
+127.0.0.1 - - [01/May/2026 15:46:27] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 86.50315104484741, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04381612176421076, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:46:54.900293"}
+127.0.0.1 - - [01/May/2026 15:46:54] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 23.33951395216021, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.010810546241142848, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:46:55.042584"}
+127.0.0.1 - - [01/May/2026 15:46:55] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 55.723150074322504, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02611674533309486, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T15:47:01.087475"}
+127.0.0.1 - - [01/May/2026 15:47:01] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 100.66775378683776, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.053775735647072644, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:48:46.949871"}
+127.0.0.1 - - [01/May/2026 16:48:46] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.43444960727206, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03234251273037525, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:48:47.459945"}
+127.0.0.1 - - [01/May/2026 16:48:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 63.7064781235802, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.030001520674148976, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:49:04.287266"}
+127.0.0.1 - - [01/May/2026 16:49:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 48.62879883407656, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026254998781783532, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:49:22.354600"}
+127.0.0.1 - - [01/May/2026 16:49:22] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 64.69594333558204, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02944732238983773, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:49:22.484384"}
+127.0.0.1 - - [01/May/2026 16:49:22] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 79.16140879223681, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04411216773011132, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:49:52.373690"}
+127.0.0.1 - - [01/May/2026 16:49:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 36.522562448191806, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0167995358665275, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:49:52.457657"}
+127.0.0.1 - - [01/May/2026 16:49:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 80.1499321344717, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.044509076601228145, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:50:10.292904"}
+127.0.0.1 - - [01/May/2026 16:50:10] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 99.39036051949027, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.046181165696218635, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:50:10.370647"}
+127.0.0.1 - - [01/May/2026 16:50:10] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 44.21528394822291, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.023792278928980663, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:50:25.266293"}
+127.0.0.1 - - [01/May/2026 16:50:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 46.35480655625119, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.025189166309229707, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:50:40.294376"}
+127.0.0.1 - - [01/May/2026 16:50:40] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 108.6654332648793, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.057290880397024714, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:51:04.284529"}
+127.0.0.1 - - [01/May/2026 16:51:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 115.4009984404602, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06140188787035738, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:51:10.268620"}
+127.0.0.1 - - [01/May/2026 16:51:10] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 70.10760595177868, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03765096866791106, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:51:31.247533"}
+127.0.0.1 - - [01/May/2026 16:51:31] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 66.94912764918605, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.036287895450078406, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:51:43.266038"}
+127.0.0.1 - - [01/May/2026 16:51:43] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 49.710310251569595, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.023258638838237203, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:51:49.276565"}
+127.0.0.1 - - [01/May/2026 16:51:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 51.62205355397856, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.024391132279041876, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:01.496198"}
+127.0.0.1 - - [01/May/2026 16:52:01] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 108.13464937312878, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.051577596125790014, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:13.257223"}
+127.0.0.1 - - [01/May/2026 16:52:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 40.365194529205056, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.022082589063557236, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:19.247055"}
+127.0.0.1 - - [01/May/2026 16:52:19] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 77.08347183050688, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.042550961594084315, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:22.454197"}
+127.0.0.1 - - [01/May/2026 16:52:22] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 29.148775965977208, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01623839526894221, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:37.294762"}
+127.0.0.1 - - [01/May/2026 16:52:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.20951429255908, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.033327205294761436, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:37.421845"}
+127.0.0.1 - - [01/May/2026 16:52:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 31.779085304157142, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.015450637001947435, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:43.321083"}
+127.0.0.1 - - [01/May/2026 16:52:43] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 60.829887224693294, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03419056608991567, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:46.257360"}
+127.0.0.1 - - [01/May/2026 16:52:46] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 98.26294364989614, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04821581251361148, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:52:58.278223"}
+127.0.0.1 - - [01/May/2026 16:52:58] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 42.75307791396677, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.023362687701930254, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:53:13.485069"}
+127.0.0.1 - - [01/May/2026 16:53:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.25348588530194, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0540962517862498, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:53:31.251118"}
+127.0.0.1 - - [01/May/2026 16:53:31] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 67.02343186662098, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03673235053550247, "timeOfDay": 16, "ipRiskScore": 0.1}, "timestamp": "2026-05-01T16:53:31.445017"}
+127.0.0.1 - - [01/May/2026 16:53:31] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 53.65668182396553, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02606721604132573, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:54:04.250665"}
+127.0.0.1 - - [01/May/2026 16:54:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 112.19142517673934, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05498118893487254, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:54:13.298949"}
+127.0.0.1 - - [01/May/2026 16:54:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 78.44776519275206, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03878359611298839, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:55:19.279455"}
+127.0.0.1 - - [01/May/2026 16:55:19] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.95807969473796, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03488985325151296, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:55:49.264577"}
+127.0.0.1 - - [01/May/2026 16:55:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 102.02982664659247, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05595076949474268, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:55:49.416548"}
+127.0.0.1 - - [01/May/2026 16:55:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 78.6676785056219, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.039836885443805384, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:56:28.337476"}
+127.0.0.1 - - [01/May/2026 16:56:28] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 98.78193683871257, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05461501770933829, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:56:28.417250"}
+127.0.0.1 - - [01/May/2026 16:56:28] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 34.619195822621535, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.017683370807359204, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:56:43.386268"}
+127.0.0.1 - - [01/May/2026 16:56:43] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.04543971036433, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.056161206939541686, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:56:52.280365"}
+127.0.0.1 - - [01/May/2026 16:56:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 95.86137914471358, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04977901944631168, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:56:58.288693"}
+127.0.0.1 - - [01/May/2026 16:56:58] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 21.418097678670627, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.011216821124199541, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:57:25.383000"}
+127.0.0.1 - - [01/May/2026 16:57:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 73.83990318567344, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03898815153576005, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:57:49.278362"}
+127.0.0.1 - - [01/May/2026 16:57:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 115.17737071001366, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06129850355086523, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:58:07.290611"}
+127.0.0.1 - - [01/May/2026 16:58:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 72.77914799658666, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03904654636364003, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:58:16.282155"}
+127.0.0.1 - - [01/May/2026 16:58:16] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 20.548737716647206, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.011115398456365421, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:58:25.289101"}
+127.0.0.1 - - [01/May/2026 16:58:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 88.08127498324785, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04804462066318386, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:58:37.404433"}
+127.0.0.1 - - [01/May/2026 16:58:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 38.86364927104029, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.020949070966577624, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:59:37.255817"}
+127.0.0.1 - - [01/May/2026 16:59:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 105.18065331837376, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.057131218463413416, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:59:49.285905"}
+127.0.0.1 - - [01/May/2026 16:59:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 112.98405494778198, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06183412516793962, "timeOfDay": 16, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T16:59:52.282939"}
+127.0.0.1 - - [01/May/2026 16:59:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 80.10394683449361, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04403852406641387, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:00:10.407849"}
+127.0.0.1 - - [01/May/2026 17:00:10] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 53.396302465048386, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029589036165075962, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:00:40.428398"}
+127.0.0.1 - - [01/May/2026 17:00:40] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 21.217087031517792, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.011796341477816566, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:00:49.289232"}
+127.0.0.1 - - [01/May/2026 17:00:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 119.48783191695209, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06692130316043304, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:00:58.399963"}
+127.0.0.1 - - [01/May/2026 17:00:58] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 28.53367814913063, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.015879413919572354, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:01:22.272303"}
+127.0.0.1 - - [01/May/2026 17:01:22] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 67.3173614062572, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03774920970263906, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:01:22.365524"}
+127.0.0.1 - - [01/May/2026 17:01:22] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 31.490073070239916, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.017771917231132237, "timeOfDay": 17, "ipRiskScore": 0.7}, "timestamp": "2026-05-01T17:01:25.278385"}
+127.0.0.1 - - [01/May/2026 17:01:25] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.150.198.93:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 46.83441390335387, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026464416101789196, "timeOfDay": 9, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T09:58:55.667796"}
+127.0.0.1 - - [12/May/2026 09:58:55] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.55254717237204, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.059660447589739776, "timeOfDay": 9, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T09:59:34.702686"}
+127.0.0.1 - - [12/May/2026 09:59:34] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 55.94181542415925, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.030688670329371392, "timeOfDay": 9, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T09:59:37.727489"}
+127.0.0.1 - - [12/May/2026 09:59:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 59.987867966358124, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03314749057058818, "timeOfDay": 10, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T10:00:04.559297"}
+127.0.0.1 - - [12/May/2026 10:00:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 59.27799733137327, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03245106324683393, "timeOfDay": 10, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T10:00:13.562891"}
+127.0.0.1 - - [12/May/2026 10:00:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 116.07780965284776, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06458885292014566, "timeOfDay": 10, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T10:00:16.739154"}
+127.0.0.1 - - [12/May/2026 10:00:16] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.136.43.93:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.136.43.93:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 52.180573313833364, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.023357080806698575, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:44:26.425521"}
+127.0.0.1 - - [12/May/2026 12:44:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 65.2246342351333, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029314604976929712, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:45:11.521142"}
+127.0.0.1 - - [12/May/2026 12:45:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 38.68270703590239, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01750503203927902, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:45:38.361990"}
+127.0.0.1 - - [12/May/2026 12:45:38] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 61.35925169993545, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.027330220738824268, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:51:33.931039"}
+127.0.0.1 - - [12/May/2026 12:51:33] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 73.32144066520024, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03287467122169152, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:51:35.142566"}
+127.0.0.1 - - [12/May/2026 12:51:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 84.60073472026455, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.038180085174743195, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:51:35.739723"}
+127.0.0.1 - - [12/May/2026 12:51:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 101.23317368250775, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04598075747224685, "timeOfDay": 12, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T12:51:35.961847"}
+127.0.0.1 - - [12/May/2026 12:51:35] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.244.154.93:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.19.8.93:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-635-389
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 89.47905311469673, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0489252278954967, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:56:08.325337"}
+127.0.0.1 - - [12/May/2026 14:56:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 30.001108469974785, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.012726085051319664, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:04.941349"}
+127.0.0.1 - - [12/May/2026 14:57:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 41.85210642465584, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.017870145534890806, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:07.920416"}
+127.0.0.1 - - [12/May/2026 14:57:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 47.77415248759365, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.020531959155190287, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:19.933794"}
+127.0.0.1 - - [12/May/2026 14:57:19] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 67.28866122352522, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03703138612568935, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:25.926592"}
+127.0.0.1 - - [12/May/2026 14:57:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 65.69153331391577, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.028413991598370842, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:28.947163"}
+127.0.0.1 - - [12/May/2026 14:57:28] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 28.476272695858267, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.015775042531510262, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:57:29.055226"}
+127.0.0.1 - - [12/May/2026 14:57:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 32.68678445586657, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.014189499121816577, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:07.930130"}
+127.0.0.1 - - [12/May/2026 14:58:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 30.341817340053282, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01685108223162936, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:26.287776"}
+127.0.0.1 - - [12/May/2026 14:58:26] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 39.92134561866722, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01744062906708192, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:29.197921"}
+127.0.0.1 - - [12/May/2026 14:58:29] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 117.76753701576882, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05176441777189176, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:35.117766"}
+127.0.0.1 - - [12/May/2026 14:58:35] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 34.20072173941747, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0181620152434412, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:47.021400"}
+127.0.0.1 - - [12/May/2026 14:58:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 44.86912310945382, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.02397742218329846, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:47.124566"}
+127.0.0.1 - - [12/May/2026 14:58:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 37.71338342743063, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.0201753194826808, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:58:58.924475"}
+127.0.0.1 - - [12/May/2026 14:58:58] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 104.47662314210717, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.045315202727983124, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:59:07.902354"}
+127.0.0.1 - - [12/May/2026 14:59:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 56.01814523339544, "velocity": 5, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03015166659520158, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:59:08.014160"}
+127.0.0.1 - - [12/May/2026 14:59:08] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 39.32715965418053, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.021431072771018325, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:59:43.914818"}
+127.0.0.1 - - [12/May/2026 14:59:43] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 111.51706297451312, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06112486244744848, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:59:46.940851"}
+127.0.0.1 - - [12/May/2026 14:59:46] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 57.25020231435704, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03130885036858064, "timeOfDay": 14, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T14:59:52.985534"}
+127.0.0.1 - - [12/May/2026 14:59:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 119.63809312755978, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06580008394042962, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:00:43.933310"}
+127.0.0.1 - - [12/May/2026 15:00:43] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 109.8721736409967, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06077287756899197, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:00:52.899987"}
+127.0.0.1 - - [12/May/2026 15:00:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 72.18958004205464, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.030749813809067737, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:00:58.899203"}
+127.0.0.1 - - [12/May/2026 15:00:58] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 80.84432057262198, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04497415462540304, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:01:13.930711"}
+127.0.0.1 - - [12/May/2026 15:01:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 44.83008095136952, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.01921139486846115, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:01:19.957966"}
+127.0.0.1 - - [12/May/2026 15:01:19] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 77.31109553435202, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04325499826583476, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:01:41.226484"}
+127.0.0.1 - - [12/May/2026 15:01:41] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 23.565270566436617, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.009995127863529569, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:02:25.932726"}
+127.0.0.1 - - [12/May/2026 15:02:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 87.62534449802301, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04812421577446183, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:02:56.075754"}
+127.0.0.1 - - [12/May/2026 15:02:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 97.6859350145777, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.05258227356600636, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:04:07.933136"}
+127.0.0.1 - - [12/May/2026 15:04:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 100.46983980713243, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.054020639507881184, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:04:31.932647"}
+127.0.0.1 - - [12/May/2026 15:04:31] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 59.94117943213479, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.032591363996770324, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:05:11.144383"}
+127.0.0.1 - - [12/May/2026 15:05:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 86.27824967725697, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04716395605510279, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:06:07.932694"}
+127.0.0.1 - - [12/May/2026 15:06:07] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 118.1103025405719, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.06458522676802292, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:06:37.932976"}
+127.0.0.1 - - [12/May/2026 15:06:37] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 96.79256906326701, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.053206637042237985, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:06:46.939212"}
+127.0.0.1 - - [12/May/2026 15:06:46] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 64.53369920027743, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026216906912978965, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:06:47.089817"}
+127.0.0.1 - - [12/May/2026 15:06:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 70.80608989070072, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.039128557551754636, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:06:47.217353"}
+127.0.0.1 - - [12/May/2026 15:06:47] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 106.18883702885425, "velocity": 4, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.058693845080068544, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:07:13.911000"}
+127.0.0.1 - - [12/May/2026 15:07:13] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 78.34667672953368, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03054484075555812, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:07:55.933043"}
+127.0.0.1 - - [12/May/2026 15:07:55] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 77.04517593459624, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03036240062567924, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:07:56.165033"}
+127.0.0.1 - - [12/May/2026 15:07:56] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 60.76503961973125, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03376308486663442, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:08:11.071930"}
+127.0.0.1 - - [12/May/2026 15:08:11] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 79.24736909167623, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.04425996318126176, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:08:25.939937"}
+127.0.0.1 - - [12/May/2026 15:08:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 69.59389183061258, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.026786156798378716, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:09:02.015373"}
+127.0.0.1 - - [12/May/2026 15:09:02] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 97.09731624566943, "velocity": 1, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.03756333474095446, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:09:52.933660"}
+127.0.0.1 - - [12/May/2026 15:09:52] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 75.50943275362944, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.029361808340877996, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:10:04.909530"}
+127.0.0.1 - - [12/May/2026 15:10:04] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 25.288747607594612, "velocity": 2, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.014143237151449458, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:10:25.936917"}
+127.0.0.1 - - [12/May/2026 15:10:25] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 44.63678085933244, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.024993440629637483, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:10:49.943248"}
+127.0.0.1 - - [12/May/2026 15:10:49] "POST /predict HTTP/1.1" 200 -
+{"transaction_id": "unknown", "probability": 0.0001, "predicted_fraud": 0, "features": {"amount": 55.33164187829515, "velocity": 3, "newDevice": 0, "newCountry": 0, "highRiskMerchant": 0, "rollingAvgRatio": 0.030994822170991393, "timeOfDay": 15, "ipRiskScore": 0.7}, "timestamp": "2026-05-12T15:11:13.993251"}
+127.0.0.1 - - [12/May/2026 15:11:13] "POST /predict HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 119-096-525

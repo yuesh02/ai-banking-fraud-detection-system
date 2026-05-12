@@ -28,6 +28,9 @@ public class FraudRisk {
     @Column(nullable = false,length = 500)
     private String reason;
 
+    @Column(length = 1000)
+    private String riskAnalysis; // For XAI breakdown (Key:Value; format)
+
     @Column(nullable = false)
     private LocalDateTime timestamp;
     @Enumerated(EnumType.STRING)

@@ -6,9 +6,8 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-import {
-  AuthProvider
-} from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthContext";
+import { NotificationProvider } from "./context/NotificationContext";
 
 ReactDOM
   .createRoot(
@@ -19,9 +18,9 @@ ReactDOM
     <BrowserRouter>
 
       <AuthProvider>
-
-        <App />
-
+        <NotificationProvider>
+          <App />
+        </NotificationProvider>
       </AuthProvider>
 
     </BrowserRouter>

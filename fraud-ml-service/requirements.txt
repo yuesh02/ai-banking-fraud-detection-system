@@ -1,6 +1,7 @@
 flask
-uvicorn
 pandas
 numpy
 scikit-learn
 joblib
+requests
+mysql-connector-python

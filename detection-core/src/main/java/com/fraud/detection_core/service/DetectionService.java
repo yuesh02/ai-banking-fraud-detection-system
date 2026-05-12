@@ -24,8 +24,30 @@ public class DetectionService {
     private final RiskEngine riskEngine;
     private final MLScoringService mlScoringService;
     private final FeatureExtractor featureExtractor;
+    private final AlertService alertService;
+    private final SystemGuardService systemGuard;
 
     public FraudRisk evaluate(Transaction transaction) {
+
+        // 0.1 Save the transaction itself (essential for manual injection)
+        transactionRepository.save(transaction);
+
+        // 0️⃣ Check Global Kill-Switch
+        if (systemGuard.isMerchantFrozen(transaction.getMerchantId())) {
+            FraudRisk killSwitchRisk = FraudRisk.builder()
+                    .transactionId(transaction.getTransactionId())
+                    .customerId(transaction.getCustomerId())
+                    .riskScore(100.0)
+                    .riskLevel(RiskLevel.HIGH)
+                    .action(RiskAction.BLOCK)
+                    .fraud(true)
+                    .reason("🚨 SYSTEM_GUARD: Merchant [" + transaction.getMerchantId() + "] is currently FROZEN due to high fraud velocity.")
+                    .timestamp(LocalDateTime.now())
+                    .build();
+            
+            riskRepository.save(killSwitchRisk);
+            return killSwitchRisk;
+        }
 
         // 1️⃣ Get transaction history
         List<Transaction> history =
@@ -34,15 +56,17 @@ public class DetectionService {
                 );
 
         StringBuilder reasons = new StringBuilder();
+        java.util.Map<String, Integer> breakdown = new java.util.HashMap<>();
 
         // 2️⃣ RULE-BASED RISK SCORE
         int ruleScore =
                 riskEngine.calculateRisk(
                         transaction,
                         history,
-                        reasons
+                        reasons,
+                        breakdown
                 );
-
+        
         // 3️⃣ FEATURE EXTRACTION
         FeatureDTO features =
                 featureExtractor.extract(
@@ -54,15 +78,32 @@ public class DetectionService {
         double mlProbability =
                 mlScoringService.score(features);
 
-        int mlScore =
-                (int) (mlProbability * 100);
+        int mlScore = -1;
+        int finalScore;
 
-        // 5️⃣ HYBRID SCORE
-        int finalScore =
-                (int) (
-                        (0.6 * ruleScore) +
-                        (0.4 * mlScore)
-                );
+        if (mlProbability >= 0) {
+            mlScore = (int) (mlProbability * 100);
+            
+            // 5️⃣ HYBRID SCORE with EXTREME RISK BYPASS
+            if (ruleScore >= 90) {
+                // If rules are extremely certain (90+), AI cannot dilute the result.
+                finalScore = ruleScore;
+                reasons.append("[EXTREME RISK: Auto-Block triggered by multiple rule hits]. ");
+            } else {
+                finalScore = (int) ((0.6 * ruleScore) + (0.4 * mlScore));
+                
+                // CRITICAL OVERRIDE: AI should not be able to "clear" a critical rule violation.
+                String reasonText = reasons.toString();
+                if (reasonText.contains("Geospatial") || reasonText.contains("Merchant") || reasonText.contains("Velocity")) {
+                    if (finalScore < 50) {
+                        finalScore = 50; 
+                        reasons.append("[OVERRIDE: Critical rule triggered; AI score dismissed]. ");
+                    }
+                }
+            }
+        } else {
+            finalScore = ruleScore;
+        }
 
         // 6️⃣ DETERMINE RISK LEVEL
         RiskLevel level =
@@ -72,7 +113,7 @@ public class DetectionService {
         // 7️⃣ DETERMINE ACTION
         RiskAction action =
                 riskDecisionService
-                        .determineAction(level);
+                        .determineAction(level, (double) finalScore);
 
         boolean fraud =
                 level == RiskLevel.HIGH;
@@ -81,18 +122,23 @@ public class DetectionService {
         String finalReason;
 
         if (reasons.length() > 0) {
-
-            finalReason =
-                    reasons.toString()
-                    + " ML Score: "
-                    + mlScore;
-
+            finalReason = reasons.toString();
+            if (mlScore >= 0) {
+                finalReason += " ML Score: " + mlScore;
+            } else {
+                finalReason += " (ML Service Offline - Rules Only)";
+            }
         } else {
-
-            finalReason =
-                    "No rule triggered; ML Score: "
-                    + mlScore;
+            if (mlScore >= 0) {
+                finalReason = "No rule triggered; ML Score: " + mlScore;
+            } else {
+                finalReason = "No rule triggered; ML Service Offline.";
+            }
         }
+
+        String analysis = breakdown.entrySet().stream()
+                .map(e -> e.getKey() + ":" + e.getValue())
+                .collect(java.util.stream.Collectors.joining(";"));
 
         // 9️⃣ CREATE FRAUD RECORD
         FraudRisk risk =
@@ -107,21 +153,27 @@ public class DetectionService {
                                 (double) finalScore
                         )
                         .actualFraud(
-    Boolean.TRUE.equals(
-        transaction.getFraud()
-    )
-)
+                            Boolean.TRUE.equals(transaction.getFraud())
+                        )
                         .riskLevel(level)
                         .action(action)
                         .fraud(fraud)
                         .reason(finalReason)
+                        .riskAnalysis(analysis)
                         .timestamp(
                                 LocalDateTime.now()
                         )
                         .build();
 
         // 🔟 SAVE RESULT
+        transactionRepository.save(transaction); // RESTORED: Vital for Network Analysis
         riskRepository.save(risk);
+
+        // TRIGGER ALERT IF AUTOMATICALLY BLOCKED
+        if (action == RiskAction.BLOCK || action == RiskAction.BLOCK_AND_ALERT) {
+            systemGuard.recordFraudBlock(transaction.getMerchantId());
+            alertService.triggerFraudAlert(risk, "Automated Detection Core");
+        }
 
         return risk;
     }

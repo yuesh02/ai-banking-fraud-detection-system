@@ -8,7 +8,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 import com.fraud.detection_core.entity.FraudRisk;
+import com.fraud.detection_core.service.FraudRingService;
 import java.util.List;
+import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/dashboard")
 @RequiredArgsConstructor
@@ -16,6 +18,12 @@ import java.util.List;
 public class DashboardController {
 
     private final DashboardService dashboardService;
+    private final FraudRingService fraudRingService;
+
+    @GetMapping("/fraud-rings")
+    public List<Map<String, Object>> getFraudRings() {
+        return fraudRingService.findFraudRings();
+    }
 
     @GetMapping("/summary")
     public DashboardSummaryDTO getSummary() {
@@ -63,13 +71,13 @@ public TransactionDetailResponseDTO getTransactionDetails(
             .getTransactionDetails(transactionId);
 }
 @GetMapping("/transactions")
-public Page<FraudRisk> getTransactions(
+public Page<TransactionDetailsDTO> getTransactions(
         @RequestParam(defaultValue = "0") int page,
         @RequestParam(defaultValue = "10") int size) {
     return dashboardService.getTransactions(page, size);
 }
 @GetMapping("/transactions/filter")
-public Page<FraudRisk> filterTransactions(
+public Page<TransactionDetailsDTO> filterTransactions(
         @RequestParam String riskLevel,
         @RequestParam(defaultValue = "0") int page,
         @RequestParam(defaultValue = "10") int size) {
@@ -78,9 +86,23 @@ public Page<FraudRisk> filterTransactions(
 }
 
 @PostMapping("/transactions/search")
-public Page<Object> searchTransactions(
+public Page<TransactionDetailsDTO> searchTransactions(
         @RequestBody TransactionSearchDTO search
 ) {
     return dashboardService.searchTransactions(search);
+}
+
+@PutMapping("/transactions/{transactionId}/action")
+public org.springframework.http.ResponseEntity<?> updateTransactionAction(
+        @PathVariable String transactionId,
+        @RequestParam com.fraud.detection_core.entity.RiskAction action
+) {
+    dashboardService.updateTransactionAction(transactionId, action);
+    return org.springframework.http.ResponseEntity.ok().build();
+}
+
+@GetMapping("/cases/review")
+public List<TransactionDetailsDTO> getReviewQueue() {
+    return dashboardService.getReviewQueue();
 }
 }

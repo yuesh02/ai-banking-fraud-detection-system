@@ -10,12 +10,16 @@ import ProtectedRoute from
   "./components/common/ProtectedRoute";
 
 import Dashboard from "./pages/Dashboard";
+import NetworkAnalysis from "./pages/NetworkAnalysis";
+import SystemControl from "./pages/SystemControl";
 import Transactions from "./pages/Transactions";
 import Alerts from "./pages/Alerts";
 import LiveMonitoring from "./pages/LiveMonitoring";
 import SystemHealth from "./pages/SystemHealth";
 import Login from "./pages/Login";
 import TransactionDetails from "./pages/TransactionDetails";
+import CaseQueue from "./pages/CaseQueue";
+import SimulatorLab from "./pages/SimulatorLab";
 
 function App() {
 
@@ -103,6 +107,58 @@ function App() {
           <ProtectedRoute>
             <MainLayout>
               <SystemHealth />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* CASE QUEUE */}
+
+      <Route
+        path="/cases"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <CaseQueue />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* SIMULATOR LAB */}
+
+      <Route
+        path="/lab"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <SimulatorLab />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* NETWORK ANALYSIS */}
+
+      <Route
+        path="/network"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <NetworkAnalysis />
+            </MainLayout>
+          </ProtectedRoute>
+        }
+      />
+
+      {/* SYSTEM CONTROL */}
+
+      <Route
+        path="/system-control"
+        element={
+          <ProtectedRoute>
+            <MainLayout>
+              <SystemControl />
             </MainLayout>
           </ProtectedRoute>
         }

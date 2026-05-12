@@ -50,28 +50,33 @@ FraudRisk findTopByTransactionIdOrderByTimestampDesc(String transactionId);
            SELECT f FROM FraudRisk f ORDER BY f.timestamp DESC   
               """) 
 List<FraudRisk> findRecentTransactions(Pageable pageable);
-@Query("""
-SELECT f
-FROM FraudRisk f
-WHERE
-(:riskLevel IS NULL OR f.riskLevel = :riskLevel)
-AND
-(:fraud IS NULL OR f.fraud = :fraud)
-AND
-(:startDate IS NULL OR f.timestamp >= :startDate)
-AND
-(:endDate IS NULL OR f.timestamp <= :endDate)
-ORDER BY f.timestamp DESC
-""")
-Page<FraudRisk> searchTransactions(
-        RiskLevel riskLevel,
-        Boolean fraud,
-        java.time.LocalDateTime startDate,
-        java.time.LocalDateTime endDate,
-        Pageable pageable
-);
+    @Query("""
+    SELECT f
+    FROM FraudRisk f
+    LEFT JOIN Transaction t ON f.transactionId = t.transactionId
+    WHERE
+    (:uuid IS NULL OR f.transactionId LIKE %:uuid%)
+    AND (:customerId IS NULL OR f.customerId LIKE %:customerId%)
+    AND (:merchantId IS NULL OR t.merchantId LIKE %:merchantId%)
+    AND (:accountId IS NULL OR t.accountId LIKE %:accountId%)
+    AND (:riskLevel IS NULL OR f.riskLevel = :riskLevel)
+    AND (:fraud IS NULL OR f.fraud = :fraud)
+    AND (:startDate IS NULL OR f.timestamp >= :startDate)
+    AND (:endDate IS NULL OR f.timestamp <= :endDate)
+    ORDER BY f.timestamp DESC
+    """)
+    Page<FraudRisk> searchTransactions(
+            @org.springframework.data.repository.query.Param("uuid") String uuid,
+            @org.springframework.data.repository.query.Param("customerId") String customerId,
+            @org.springframework.data.repository.query.Param("merchantId") String merchantId,
+            @org.springframework.data.repository.query.Param("accountId") String accountId,
+            @org.springframework.data.repository.query.Param("riskLevel") RiskLevel riskLevel,
+            @org.springframework.data.repository.query.Param("fraud") Boolean fraud,
+            @org.springframework.data.repository.query.Param("startDate") java.time.LocalDateTime startDate,
+            @org.springframework.data.repository.query.Param("endDate") java.time.LocalDateTime endDate,
+            Pageable pageable
+    );
 
-
-
+List<FraudRisk> findByActionOrderByTimestampDesc(RiskAction action);
 
 }

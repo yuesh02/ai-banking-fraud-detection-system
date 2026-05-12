@@ -1,27 +1,15 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
-
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  CartesianGrid
-} from "recharts";
-
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { getRiskByCountry } from "../../services/countryService";
 
 /* Tooltip */
 function CustomTooltip({ active, payload, label }) {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-white border border-gray-200 shadow-lg rounded-lg px-3 py-2 text-sm">
+      <div className="bg-[#0f172a] border border-white/10 shadow-lg rounded-lg px-3 py-2 text-sm backdrop-blur-md">
         <p className="text-gray-400">{label}</p>
-        <p className="text-gray-900 font-semibold">
-          {payload[0].value} frauds
-        </p>
+        <p className="text-white font-semibold">{payload[0].value} frauds</p>
       </div>
     );
   }
@@ -29,21 +17,16 @@ function CustomTooltip({ active, payload, label }) {
 }
 
 function RiskByCountryChart() {
-
   const [data, setData] = useState([]);
   const [seconds, setSeconds] = useState(15);
-  const [animateKey, setAnimateKey] = useState(0); // 🔥 for animation reset
+  const [animateKey, setAnimateKey] = useState(0);
 
   const fetchCountries = async () => {
     try {
       const result = await getRiskByCountry();
-
       setData(result);
       setSeconds(15);
-
-      // 🔥 trigger animation on refresh
       setAnimateKey(prev => prev + 1);
-
     } catch (error) {
       console.error("Country fetch error:", error);
     }
@@ -55,71 +38,55 @@ function RiskByCountryChart() {
     return () => clearInterval(interval);
   }, []);
 
-  /* Countdown */
   useEffect(() => {
     const timer = setInterval(() => {
       setSeconds(prev => (prev === 0 ? 15 : prev - 1));
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm mt-6 transition-all duration-300">
-
-      {/* Header */}
-      <div className="flex justify-between items-center px-5 py-4 border-b border-gray-100">
-        <h2 className="text-base font-semibold text-gray-800">
-          Risk by Country
-        </h2>
-
-        <span className="text-xs text-gray-400">
-          {seconds}s refresh
-        </span>
+    <div className="glass-card rounded-2xl border border-white/5 shadow-sm mt-6 transition-all duration-300">
+      <div className="flex justify-between items-center px-5 py-4 border-b border-white/5">
+        <h2 className="text-base font-semibold text-white">Risk by Country</h2>
+        <span className="text-xs text-gray-500">{seconds}s refresh</span>
       </div>
 
-      {/* Chart */}
       <div className="p-5">
         <ResponsiveContainer width="100%" height={280}>
           <BarChart key={animateKey} data={data}>
-
-            {/* Grid */}
-            <CartesianGrid stroke="#f1f5f9" vertical={false} />
-
-            {/* X Axis */}
+            <CartesianGrid stroke="#1e293b" vertical={false} />
             <XAxis
               dataKey="country"
-              tick={{ fontSize: 12, fill: "#475569", fontWeight: 500 }}
-              axisLine={{ stroke: "#e2e8f0" }}
+              tick={{ fontSize: 12, fill: "#94a3b8", fontWeight: 500 }}
+              axisLine={{ stroke: "#334155" }}
               tickLine={false}
               interval={0}
             />
-
-            {/* Y Axis */}
             <YAxis
-              tick={{ fontSize: 12, fill: "#475569", fontWeight: 500 }}
-              axisLine={{ stroke: "#e2e8f0" }}
+              tick={{ fontSize: 12, fill: "#94a3b8", fontWeight: 500 }}
+              axisLine={{ stroke: "#334155" }}
               tickLine={false}
             />
-
-            {/* Tooltip */}
-            <Tooltip content={<CustomTooltip />} />
-
-            {/* Bars */}
+            <Tooltip content={<CustomTooltip />} cursor={{fill: '#1e293b', opacity: 0.4}} />
             <Bar
               dataKey="fraudCount"
               radius={[8, 8, 0, 0]}
               barSize={40}
-              fill="#4f46e5"
+              fill="url(#colorCountryBar)"
               isAnimationActive={true}
               animationDuration={800}
               animationEasing="ease-out"
             />
-
+            <defs>
+              <linearGradient id="colorCountryBar" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#0ea5e9" stopOpacity={1} />
+                <stop offset="100%" stopColor="#0ea5e9" stopOpacity={0.2} />
+              </linearGradient>
+            </defs>
           </BarChart>
         </ResponsiveContainer>
       </div>
-
     </div>
   );
 }

@@ -12,20 +12,21 @@ import java.time.LocalDate;
 @Builder
 public class TransactionSearchDTO {
 
+    private String uuid; // Previously transactionId
+    private String customerId;
+    private String merchantId;
+    private String accountId;
+
     private LocalDate startDate;
-
     private LocalDate endDate;
-
     private Double minAmount;
-
     private Double maxAmount;
-
     private RiskLevel riskLevel;
-
     private Boolean fraud;
 
+    @Builder.Default
     private Integer page = 0;
-
+    @Builder.Default
     private Integer size = 10;
 
 }

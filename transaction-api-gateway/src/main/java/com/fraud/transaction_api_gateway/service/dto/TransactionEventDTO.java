@@ -10,11 +10,18 @@ import java.time.LocalDateTime;
 @Builder
 public class TransactionEventDTO {
     private String transactionId;
+    private String accountId;
     private String customerId;
+    private String transactionType;
+    private String channel;
     private Double amount;
+    private String currency;
+    private String merchantId;
+    private String merchantCategory;
+    private String merchantCountry;
+    private String customerCountry;
     private String deviceId;
     private String ipAddress;
-    private String merchantCountry;
-    private String merchantCategory;
     private LocalDateTime timestamp;
+    private Boolean fraud;
 }

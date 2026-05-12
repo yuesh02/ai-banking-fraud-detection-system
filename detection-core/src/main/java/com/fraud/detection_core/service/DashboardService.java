@@ -42,45 +42,25 @@ public List<TransactionMonitorDTO> getLiveTransactions() {
                                 .orElse(null);
 
                 return TransactionMonitorDTO.builder()
-
-                        .transactionId(
-                                r.getTransactionId()
-                        )
-
-                        .customerId(
-                                r.getCustomerId()
-                        )
-
-                        .amount(
-                                txn != null
-                                        ? txn.getAmount()
-                                        : null
-                        )
-
-                        .riskScore(
-                                r.getRiskScore()
-                        )
-
-                        .riskLevel(
-                                r.getRiskLevel()
-                        )
-
-                        .action(
-                                r.getAction()
-                        )
-
-                        .fraud(
-                                r.isFraud()
-                        )
-
-                        .reason(
-                                r.getReason()
-                        )
-
-                        .timestamp(
-                                r.getTimestamp()
-                        )
-
+                        .transactionId(r.getTransactionId())
+                        .customerId(r.getCustomerId())
+                        .accountId(txn != null ? txn.getAccountId() : null)
+                        .transactionType(txn != null ? txn.getTransactionType() : null)
+                        .channel(txn != null ? txn.getChannel() : null)
+                        .amount(txn != null ? txn.getAmount() : null)
+                        .currency(txn != null ? txn.getCurrency() : null)
+                        .merchantId(txn != null ? txn.getMerchantId() : null)
+                        .merchantCategory(txn != null ? txn.getMerchantCategory() : null)
+                        .merchantCountry(txn != null ? txn.getMerchantCountry() : null)
+                        .customerCountry(txn != null ? txn.getCustomerCountry() : null)
+                        .deviceId(txn != null ? txn.getDeviceId() : null)
+                        .ipAddress(txn != null ? txn.getIpAddress() : null)
+                        .riskScore(r.getRiskScore())
+                        .riskLevel(r.getRiskLevel())
+                        .action(r.getAction())
+                        .fraud(r.isFraud())
+                        .reason(r.getReason())
+                        .timestamp(r.getTimestamp())
                         .build();
 
             })
@@ -185,76 +165,38 @@ public List<TransactionMonitorDTO> getLiveTransactions() {
                     .toList();
 
     return TransactionDetailResponseDTO.builder()
-
-            .transactionId(
-                    txn.getTransactionId()
-            )
-
-            .customerId(
-                    txn.getCustomerId()
-            )
-
-            .amount(
-                    txn.getAmount()
-            )
-
-            .merchantId(
-                    txn.getMerchantId()
-            )
-
-            .merchantCountry(
-                    txn.getMerchantCountry()
-            )
-
-            .deviceId(
-                    txn.getDeviceId()
-            )
-
-            .riskScore(
-                    risk != null
-                            ? risk.getRiskScore()
-                            : null
-            )
-
-            .riskLevel(
-                    risk != null
-                            ? risk.getRiskLevel()
-                            : null
-            )
-
-            .action(
-                    risk != null
-                            ? risk.getAction()
-                            : null
-            )
-
-            .fraud(
-                    risk != null
-                            ? risk.isFraud()
-                            : false
-            )
-
-            .reason(
-                    risk != null
-                            ? risk.getReason()
-                            : "SAFE"
-            )
-
-            .timestamp(
-                    txn.getTimestamp()
-            )
-
+            .transactionId(txn.getTransactionId())
+            .customerId(txn.getCustomerId())
+            .accountId(txn.getAccountId())
+            .transactionType(txn.getTransactionType())
+            .channel(txn.getChannel())
+            .amount(txn.getAmount())
+            .currency(txn.getCurrency())
+            .merchantId(txn.getMerchantId())
+            .merchantCategory(txn.getMerchantCategory())
+            .merchantCountry(txn.getMerchantCountry())
+            .customerCountry(txn.getCustomerCountry())
+            .deviceId(txn.getDeviceId())
+            .ipAddress(txn.getIpAddress())
+            .riskScore(risk != null ? risk.getRiskScore() : null)
+            .riskLevel(risk != null ? risk.getRiskLevel() : null)
+            .action(risk != null ? risk.getAction() : null)
+            .fraud(risk != null ? risk.isFraud() : false)
+            .reason(risk != null ? risk.getReason() : "SAFE")
+            .timestamp(txn.getTimestamp())
             .history(history)
-
             .build();
 }
 
-public Page<Object> searchTransactions(
+public Page<TransactionDetailsDTO> searchTransactions(
         TransactionSearchDTO search
 ) {
-
     Page<FraudRisk> risks =
             fraudRiskRepository.searchTransactions(
+                    search.getUuid(),
+                    search.getCustomerId(),
+                    search.getMerchantId(),
+                    search.getAccountId(),
                     search.getRiskLevel(),
                     search.getFraud(),
                     search.getStartDate() != null
@@ -270,80 +212,43 @@ public Page<Object> searchTransactions(
             );
 
     return risks.map(r -> {
-
-        Transaction txn =
-                transactionRepository
-                        .findByTransactionId(
-                                r.getTransactionId()
-                        )
-                        .orElse(null);
-
-        if (txn == null)
-            return null;
-
-        return mapToTransactionDetails(
-                r,
-                txn
-        );
-
+        Transaction txn = transactionRepository.findByTransactionId(r.getTransactionId()).orElse(null);
+        return mapToTransactionDetails(r, txn);
     });
 }
 private TransactionDetailsDTO mapToTransactionDetails(
         FraudRisk risk,
         Transaction txn
 ) {
+    TransactionDetailsDTO.TransactionDetailsDTOBuilder builder = TransactionDetailsDTO.builder()
+            .transactionId(risk.getTransactionId())
+            .customerId(risk.getCustomerId())
+            .riskScore(risk.getRiskScore())
+            .riskLevel(risk.getRiskLevel())
+            .action(risk.getAction())
+            .fraud(risk.isFraud())
+            .reason(risk.getReason())
+            .riskAnalysis(risk.getRiskAnalysis())
+            .timestamp(risk.getTimestamp());
 
-    return TransactionDetailsDTO.builder()
+    if (txn != null) {
+        builder
+            .accountId(txn.getAccountId())
+            .transactionType(txn.getTransactionType())
+            .channel(txn.getChannel())
+            .amount(txn.getAmount())
+            .currency(txn.getCurrency())
+            .merchantId(txn.getMerchantId())
+            .merchantCategory(txn.getMerchantCategory())
+            .merchantCountry(txn.getMerchantCountry())
+            .customerCountry(txn.getCustomerCountry())
+            .deviceId(txn.getDeviceId())
+            .ipAddress(txn.getIpAddress());
+    }
 
-            .transactionId(
-                    risk.getTransactionId()
-            )
-
-            .customerId(
-                    risk.getCustomerId()
-            )
-            .amount(
-                    txn.getAmount()
-            )
-
-            .merchantId(
-                    txn.getMerchantId()
-            )
-
-            .merchantCountry(
-                    txn.getMerchantCountry()
-            )
-
-            .deviceId(
-                    txn.getDeviceId()
-            )
-
-            .riskScore(
-                    risk.getRiskScore()
-            )
-
-            .riskLevel(
-                    risk.getRiskLevel()
-            )
-
-            .action(
-                    risk.getAction()
-            )
-
-            .fraud(
-                    risk.isFraud()
-            )
-
-            .reason(
-                    risk.getReason()
-            )
-
-            .timestamp(
-                    risk.getTimestamp()
-            )
-
-            .build();
+    return builder.build();
 }
+
     // ================= COUNTRY RISK =================
 
     public List<CountryRiskDTO> getRiskByCountry() {
@@ -497,34 +402,80 @@ public Page<TransactionDetailsDTO> getRecentTransactions() {
 
     // ================= TRANSACTIONS =================
 
-    public Page<FraudRisk> getTransactions(
+    public Page<TransactionDetailsDTO> getTransactions(
             int page,
             int size
     ) {
-
-        return fraudRiskRepository.findAll(
-                PageRequest.of(page, size)
+        Page<FraudRisk> risks = fraudRiskRepository.findAll(
+                PageRequest.of(page, size, org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.DESC, "timestamp"))
         );
+
+        return risks.map(r -> {
+            Transaction txn = transactionRepository.findByTransactionId(r.getTransactionId()).orElse(null);
+            return mapToTransactionDetails(r, txn);
+        });
     }
 
     // ================= FILTER BY RISK LEVEL =================
 
-    public Page<FraudRisk> getTransactionsByRiskLevel(
+    public Page<TransactionDetailsDTO> getTransactionsByRiskLevel(
             String riskLevel,
             int page,
             int size
     ) {
+        RiskLevel level = RiskLevel.valueOf(riskLevel.toUpperCase());
 
-        RiskLevel level =
-                RiskLevel.valueOf(
-                        riskLevel.toUpperCase()
-                );
+        Page<FraudRisk> risks = fraudRiskRepository.findByRiskLevelOrderByTimestampDesc(
+                level,
+                PageRequest.of(page, size)
+        );
 
+        return risks.map(r -> {
+            Transaction txn = transactionRepository.findByTransactionId(r.getTransactionId()).orElse(null);
+            return mapToTransactionDetails(r, txn);
+        });
+    }
+
+    // ================= CASE REVIEW QUEUE =================
+
+    public List<TransactionDetailsDTO> getReviewQueue() {
         return fraudRiskRepository
-                .findByRiskLevelOrderByTimestampDesc(
-                        level,
-                        PageRequest.of(page, size)
-                );
+                .findByActionOrderByTimestampDesc(com.fraud.detection_core.entity.RiskAction.REVIEW)
+                .stream()
+                .map(risk -> {
+                    Transaction txn = transactionRepository.findByTransactionId(risk.getTransactionId()).orElse(null);
+                    return mapToTransactionDetails(risk, txn);
+                })
+                .collect(java.util.stream.Collectors.toList());
+    }
+
+    private final AlertService alertService;
+
+    // ================= MANUAL ACTIONS =================
+
+    public void updateTransactionAction(String transactionId, com.fraud.detection_core.entity.RiskAction newAction) {
+        FraudRisk risk = fraudRiskRepository.findByTransactionId(transactionId)
+                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+        
+        risk.setAction(newAction);
+        
+        if (newAction == com.fraud.detection_core.entity.RiskAction.ALLOW || newAction == com.fraud.detection_core.entity.RiskAction.ALLOW_WITH_FLAG) {
+            risk.setFraud(false);
+            risk.setRiskLevel(RiskLevel.LOW);
+        } else if (newAction == com.fraud.detection_core.entity.RiskAction.REVIEW) {
+            risk.setFraud(false);
+            risk.setRiskLevel(RiskLevel.MEDIUM);
+        } else if (newAction == com.fraud.detection_core.entity.RiskAction.BLOCK || newAction == com.fraud.detection_core.entity.RiskAction.BLOCK_AND_ALERT) {
+            risk.setFraud(true);
+            risk.setRiskLevel(RiskLevel.HIGH);
+            
+            // Trigger alert when admin manually blocks
+            alertService.triggerFraudAlert(risk, "Manual Admin Override");
+        }
+        
+        risk.setReason("Manually overridden to " + newAction.name() + " by admin");
+        
+        fraudRiskRepository.save(risk);
     }
 
 }
